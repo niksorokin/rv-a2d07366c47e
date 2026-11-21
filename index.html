@@ -363,12 +363,15 @@
 .s-rec .m30-opt b, .s-sec .m30-mask b{ color:var(--ink); font-weight:500; }
 .m30-tag{ margin-left:2px; padding:3px 7px; border-radius:6px; background:rgba(59,91,255,.10); color:var(--accent); font-size:10.5px; letter-spacing:.12em; }
 
-/* v30: onboarding + four weeks */
-.tl2-grid.m30-grid{ grid-template-columns:.7fr repeat(4,1fr); }
-.tl2-grid.m30-grid i:first-child{ background:rgba(59,91,255,.035); }
+/* v30: onboarding + install in parallel, four weeks */
+.tl2-bar.m30-ob, .tl2-bar.m30-in{ padding:0 12px; }
+.tl2-bar.m30-in{ top:124px; }
+.m30-par{ position:absolute; top:58px; height:52px; display:flex; align-items:center; padding-left:14px; pointer-events:none; font-family:var(--mono); font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--mute); white-space:nowrap; }
 .tl2-bar.m30-ck{ top:256px; justify-content:center; background:#fff; color:var(--accent); box-shadow:inset 0 0 0 1.5px rgba(59,91,255,.45); font-size:clamp(14px,1vw,17px); padding:0 10px; }
 .tl2-bar.m30-ckm{ display:none; }
-@media (max-width:900px){ .tl2-bar.m30-ck{ display:none; } .tl2-bar.m30-ckm{ display:flex; background:#fff; color:var(--accent); box-shadow:inset 0 0 0 1.5px rgba(59,91,255,.45); } }
+.m30-pm{ display:none; }
+@media (max-width:900px){ .m30-pm{ display:inline; margin-left:-8px; } }
+@media (max-width:900px){ .tl2-bar.m30-ck, .m30-par{ display:none; } .tl2-bar.m30-ckm{ display:flex; background:#fff; color:var(--accent); box-shadow:inset 0 0 0 1.5px rgba(59,91,255,.45); } }
 </style>
 </head>
 <body>
@@ -516,16 +519,18 @@
   <div class="eyebrow rise">How we start</div>
   <h2 class="rise d1">First month <em>free.</em></h2>
   <div class="sub rise d1">20–30 people<span>·</span>one team you choose<span>·</span>results from week one</div>
-  <div class="tl2 m30 rise d2" aria-label="Onboarding and a four-week timeline">
-    <div class="tl2-grid m30-grid"><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="tl2-flag" style="left:36.17%"><b>After week 1</b>reports and plan are live</div>
-    <div class="tl2-bar setup" style="left:0%;width:14.89%">Onboarding</div>
-    <div class="tl2-bar rec" style="left:14.89%;width:85.11%">Recording runs in the background<small>all four weeks</small></div>
-    <div class="tl2-bar out" style="left:36.17%;width:63.83%">Reports · process maps · automation plan<small>updated every week</small></div>
-    <div class="tl2-bar m30-ck" style="left:17.09%;width:16.88%">Manager checkpoint</div><div class="tl2-bar m30-ck" style="left:38.37%;width:16.88%">Manager checkpoint</div><div class="tl2-bar m30-ck" style="left:59.65%;width:16.87%">Manager checkpoint</div>
+  <div class="tl2 m30 rise d2" aria-label="Four-week timeline: onboarding and install in parallel, then recording, weekly checkpoints and a debrief">
+    <div class="tl2-grid"><i></i><i></i><i></i><i></i></div>
+    <div class="tl2-flag" style="left:25%"><b>After week 1</b>reports and plan are live</div>
+    <div class="tl2-bar setup m30-ob" style="left:0;width:11%">Onboarding</div>
+    <div class="m30-par" style="left:11%">↓ in parallel</div>
+    <div class="tl2-bar setup m30-in" style="left:0;width:11%">Install<span class="m30-pm">· in parallel with onboarding</span></div>
+    <div class="tl2-bar rec" style="left:11.6%;width:88.4%">Recording runs in the background<small>all four weeks</small></div>
+    <div class="tl2-bar out" style="left:25%;width:75%">Reports · process maps · automation plan<small>updated every week</small></div>
+    <div class="tl2-bar m30-ck" style="left:2.5%;width:20%">Manager checkpoint</div><div class="tl2-bar m30-ck" style="left:27.5%;width:20%">Manager checkpoint</div><div class="tl2-bar m30-ck" style="left:52.5%;width:20%">Manager checkpoint</div>
     <div class="tl2-bar m30-ckm">Manager checkpoint every week</div>
-    <div class="tl2-bar end" style="left:79.92%;width:20.08%">Debrief<small>end of month</small></div>
-    <div class="tl2-axis wk"><span style="left:7.45%">Onboarding</span><span style="left:25.53%">Week 1</span><span style="left:46.81%">Week 2</span><span style="left:68.09%">Week 3</span><span style="left:89.36%">Week 4</span></div>
+    <div class="tl2-bar end" style="left:76.2%;width:23.8%">Debrief<small>end of month</small></div>
+    <div class="tl2-axis wk"><span style="left:12.5%">Week 1</span><span style="left:37.5%">Week 2</span><span style="left:62.5%">Week 3</span><span style="left:87.5%">Week 4</span></div>
   </div>
 </section>
 <section class="dark s-layers s-iso">
