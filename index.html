@@ -363,15 +363,20 @@
 .s-rec .m30-opt b, .s-sec .m30-mask b{ color:var(--ink); font-weight:500; }
 .m30-tag{ margin-left:2px; padding:3px 7px; border-radius:6px; background:rgba(59,91,255,.10); color:var(--accent); font-size:10.5px; letter-spacing:.12em; }
 
-/* v30: onboarding + install in parallel, four weeks */
-.tl2-bar.m30-ob, .tl2-bar.m30-in{ padding:0 12px; }
-.tl2-bar.m30-in{ top:124px; }
-.m30-par{ position:absolute; top:58px; height:52px; display:flex; align-items:center; padding-left:14px; pointer-events:none; font-family:var(--mono); font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--mute); white-space:nowrap; }
-.tl2-bar.m30-ck{ top:256px; justify-content:center; background:#fff; color:var(--accent); box-shadow:inset 0 0 0 1.5px rgba(59,91,255,.45); font-size:clamp(14px,1vw,17px); padding:0 10px; }
-.tl2-bar.m30-ckm{ display:none; }
-.m30-pm{ display:none; }
-@media (max-width:900px){ .m30-pm{ display:inline; margin-left:-8px; } }
-@media (max-width:900px){ .tl2-bar.m30-ck, .m30-par{ display:none; } .tl2-bar.m30-ckm{ display:flex; background:#fff; color:var(--accent); box-shadow:inset 0 0 0 1.5px rgba(59,91,255,.45); } }
+/* v30: four week cards + recording rail */
+.m30{ margin-top:6vh; width:min(1240px,86vw); text-align:left; }
+.m30-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.m30-wk{ display:flex; flex-direction:column; padding:22px 22px 20px; border-radius:16px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); }
+.m30-n{ font-family:var(--mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); }
+.m30-t{ margin-top:12px; font-size:clamp(20px,1.6vw,27px); font-weight:500; letter-spacing:-0.02em; color:var(--ink); line-height:1.15; }
+.m30-t em{ font-style:normal; color:var(--accent); }
+.m30-d{ margin-top:10px; font-size:clamp(15px,1.1vw,18px); line-height:1.4; color:var(--mute); flex:1 1 auto; }
+.m30-chip{ align-self:flex-start; margin-top:18px; padding:6px 10px; border-radius:8px; font-size:14px; font-weight:500; color:var(--accent); background:rgba(59,91,255,.08); }
+.m30-chip.dk{ background:var(--ink); color:#fff; }
+.m30-rail{ margin-top:14px; display:flex; align-items:center; gap:12px; height:48px; padding:0 20px; border-radius:14px; background:var(--paper-2); color:var(--ink-2); font-size:clamp(15px,1.15vw,19px); font-weight:500; }
+.m30-rail i{ width:10px; height:10px; border-radius:50%; background:#E5484D; box-shadow:0 0 0 4px rgba(229,72,77,.15); flex:none; }
+.m30-rail span{ margin-left:auto; font-family:var(--mono); font-weight:400; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--mute); background:#fff; padding:4px 8px; border-radius:6px; }
+@media (max-width:900px){ .m30{ width:100%; margin-top:4vh; } .m30-grid{ grid-template-columns:1fr; gap:10px; } .m30-wk{ padding:16px; } .m30-rail{ height:auto; padding:12px 14px; flex-wrap:wrap; } .m30-rail span{ margin-left:0; } }
 </style>
 </head>
 <body>
@@ -518,19 +523,10 @@
 <section class="s-month">
   <div class="eyebrow rise">How we start</div>
   <h2 class="rise d1">First month <em>free.</em></h2>
-  <div class="sub rise d1">20–30 people<span>·</span>one team you choose<span>·</span>results from week one</div>
-  <div class="tl2 m30 rise d2" aria-label="Four-week timeline: onboarding and install in parallel, then recording, weekly checkpoints and a debrief">
-    <div class="tl2-grid"><i></i><i></i><i></i><i></i></div>
-    <div class="tl2-flag" style="left:25%"><b>After week 1</b>reports and plan are live</div>
-    <div class="tl2-bar setup m30-ob" style="left:0;width:11%">Onboarding</div>
-    <div class="m30-par" style="left:11%">↓ in parallel</div>
-    <div class="tl2-bar setup m30-in" style="left:0;width:11%">Install<span class="m30-pm">· in parallel with onboarding</span></div>
-    <div class="tl2-bar rec" style="left:11.6%;width:88.4%">Recording runs in the background<small>all four weeks</small></div>
-    <div class="tl2-bar out" style="left:25%;width:75%">Reports · process maps · automation plan<small>updated every week</small></div>
-    <div class="tl2-bar m30-ck" style="left:2.5%;width:20%">Manager checkpoint</div><div class="tl2-bar m30-ck" style="left:27.5%;width:20%">Manager checkpoint</div><div class="tl2-bar m30-ck" style="left:52.5%;width:20%">Manager checkpoint</div>
-    <div class="tl2-bar m30-ckm">Manager checkpoint every week</div>
-    <div class="tl2-bar end" style="left:76.2%;width:23.8%">Debrief<small>end of month</small></div>
-    <div class="tl2-axis wk"><span style="left:12.5%">Week 1</span><span style="left:37.5%">Week 2</span><span style="left:62.5%">Week 3</span><span style="left:87.5%">Week 4</span></div>
+  <div class="sub rise d1">20–30 people<span>·</span>one team you choose<span>·</span>results after week one</div>
+  <div class="m30 rise d2" aria-label="Four weeks: onboarding and install in parallel, reports live from week two, a manager checkpoint every week, a debrief at the end of the month">
+    <div class="m30-grid"><div class="m30-wk"><div class="m30-n">Week 1</div><div class="m30-t">Onboarding <em>+</em> install</div><div class="m30-d">In parallel: the team hears what it’s for while the recorder goes on.</div><div class="m30-chip">Manager checkpoint</div></div><div class="m30-wk"><div class="m30-n">Week 2</div><div class="m30-t">Reports go live</div><div class="m30-d">Process maps and the automation plan, updated every week.</div><div class="m30-chip">Manager checkpoint</div></div><div class="m30-wk"><div class="m30-n">Week 3</div><div class="m30-t">The plan sharpens</div><div class="m30-d">Another week of real runs behind every step and estimate.</div><div class="m30-chip">Manager checkpoint</div></div><div class="m30-wk"><div class="m30-n">Week 4</div><div class="m30-t">Debrief</div><div class="m30-d">Together: what to automate first, and why.</div><div class="m30-chip dk">End of month</div></div></div>
+    <div class="m30-rail"><i></i>Recording runs in the background<span>all four weeks</span></div>
   </div>
 </section>
 <section class="dark s-layers s-iso">
@@ -1025,7 +1021,7 @@
   <div class="appframe"><iframe title="Silow · automation plan item" data-src="app2/index.html?embed=1#plan~sug=fnol"></iframe></div>
 </section>
 <section class="s-where">
-    <div class="eyebrow rise">Where it helps <b>·</b> finance &amp; operations first</div>
+    <div class="eyebrow rise">Where it helps <b>·</b> examples</div>
     <h2 class="rise d1" style="font-size:clamp(44px,4.8vw,80px); max-width:none;">Anywhere work runs<br><em>between systems.</em></h2>
     <div class="roles roles-nine rise d2">
       <div><div class="r">Month-end close</div><div class="d">Reconciliation and the operating pack rebuilt in Excel, month after month.</div></div>
@@ -1038,7 +1034,6 @@
       <div><div class="r">Claims operations</div><div class="d">Documents chased and matched to the file.</div></div>
       <div><div class="r">Underwriting support</div><div class="d">Submissions re-typed before anyone decides.</div></div>
     </div>
-    <div class="roles-foot rise d3">Claims and underwriting are examples of the same pattern <b>·</b> the work we start with is yours to choose.</div>
   </section>
 <section class="s-close">
   <h2 class="rise">Pick a team.<br><em>Start the free month.</em></h2>
