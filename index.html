@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Silow — for insurance operations</title><!-- rev:ins-v41 -->
+<title>Silow — for insurance operations</title><!-- rev:ins-v42 -->
 <style>
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
@@ -636,6 +636,33 @@
 .v41-four p{ margin:0; padding-top:16px; border-top:1.5px solid var(--accent); font-size:clamp(16px,1.25vw,21px); line-height:1.4; color:var(--ink-2); }
 .v41-four p span{ display:block; margin-bottom:8px; font-size:clamp(19px,1.5vw,25px); font-weight:500; letter-spacing:-.02em; color:var(--ink); }
 @media (max-width:900px){ .v41-four{ grid-template-columns:1fr; gap:22px; width:100%; } }
+
+/* v42: first-month timeline */
+.v42-grid{ margin-top:5vh; width:min(1320px,92vw); display:grid; grid-template-columns:120px 1.15fr 1.15fr repeat(4,1fr) 1.1fr; grid-template-rows:auto repeat(4,auto); column-gap:8px; row-gap:10px; text-align:left; position:relative; }
+.v42-grid .hd{ padding:0 4px 10px; font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--mute); border-bottom:1.5px solid var(--line-2); }
+.v42-grid .hd.wk{ color:var(--accent); border-bottom-color:var(--accent); text-align:center; }
+.v42-grid .hd.post{ text-align:center; }
+.v42-grid .gl{ border-left:1px dashed var(--line-2); margin-left:-4px; pointer-events:none; }
+.v42-grid .lb{ align-self:center; font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--mute); }
+.v42-grid .b{ position:relative; z-index:1; border-radius:12px; padding:12px 14px; font-size:clamp(14px,1.05vw,17px); line-height:1.3; display:flex; flex-direction:column; justify-content:center; gap:3px; }
+.v42-grid .b b{ font-weight:500; color:var(--ink); letter-spacing:-.01em; font-size:clamp(15px,1.15vw,19px); }
+.v42-grid .b span{ color:var(--mute); font-size:clamp(12.5px,.95vw,15px); }
+.v42-grid .setup, .v42-grid .onb{ background:#fff; box-shadow:inset 0 0 0 1.5px var(--accent); }
+.v42-grid .rec{ background:var(--paper-2); color:var(--ink-2); font-weight:500; }
+.v42-grid .out{ background:var(--accent); color:#fff; font-weight:500; flex-direction:row; align-items:center; justify-content:flex-start; gap:12px; }
+.v42-grid .out small{ font-family:var(--mono); font-weight:400; font-size:11px; letter-spacing:.08em; text-transform:uppercase; opacity:.8; }
+.v42-grid .ck{ position:relative; z-index:1; align-self:center; justify-self:center; display:flex; align-items:center; gap:7px; padding:6px 10px; border-radius:20px; background:rgba(59,91,255,.08); color:var(--accent); font-size:clamp(12px,.9vw,14.5px); font-weight:500; white-space:nowrap; }
+.v42-grid .ck i{ width:8px; height:8px; border-radius:50%; background:var(--accent); flex:none; }
+.v42-grid .db{ position:relative; z-index:1; border-radius:14px; background:var(--ink); color:#fff; padding:16px; display:flex; flex-direction:column; justify-content:center; gap:6px; }
+.v42-grid .db b{ font-weight:500; font-size:clamp(17px,1.3vw,22px); letter-spacing:-.015em; }
+.v42-grid .db span{ font-size:clamp(13px,1vw,16px); opacity:.75; line-height:1.35; }
+@media (max-width:900px){
+  .v42-grid{ grid-template-columns:1fr; width:100%; row-gap:8px; }
+  .v42-grid > *{ grid-column:auto !important; grid-row:auto !important; }
+  .v42-grid .hd, .v42-grid .gl, .v42-grid .lb, .v42-grid .ck:not(.first){ display:none; }
+  .v42-grid .ck{ justify-self:start; }
+  .v42-grid .ck::after{ content:" · every week"; }
+}
 </style>
 </head>
 <body>
@@ -1243,6 +1270,11 @@
     <div class="n">1</div><div class="c o"><b>Server and GPU spec</b><span>Sized for your pilot scope</span></div><div class="c y">Sets up the servers and GPUs</div><div class="n">2</div><div class="c o"><b>Installer</b><span>Offline package with instructions</span></div><div class="c y">Installs it in your network</div><div class="n">3</div><div class="c o"><b>Recorder app</b><span>Silent installers for Windows, macOS, Linux</span></div><div class="c y">Pushes it to laptops through device management</div><div class="n">4</div><div class="c o"><b>Updates</b><span>Update packages, offline</span></div><div class="c y">Applies them</div><div class="n">5</div><div class="c o"><b>Scripts and engineering support</b><span>Health checks and help when needed</span></div><div class="c y">Runs the checks, raises issues</div>
   </div>
   <p class="v31-foot rise d3">No access into your network for Silow, <b>unless you choose to open it.</b></p>
+</section>
+<section class="v31 v42-tl">
+  <div class="eyebrow rise">How we start <b>·</b> the first month is free</div>
+  <h2 class="rise d1">The first month, <em>week by week.</em></h2>
+  <div class="v42-grid rise d2"><div class="hd pre" style="grid-column:2 / 4;grid-row:1">Before week 1</div><div class="hd wk" style="grid-column:4;grid-row:1">Week 1</div><div class="hd wk" style="grid-column:5;grid-row:1">Week 2</div><div class="hd wk" style="grid-column:6;grid-row:1">Week 3</div><div class="hd wk" style="grid-column:7;grid-row:1">Week 4</div><div class="hd post" style="grid-column:8;grid-row:1">After week 4</div><div class="gl" style="grid-column:4;grid-row:1 / 6"></div><div class="gl" style="grid-column:5;grid-row:1 / 6"></div><div class="gl" style="grid-column:6;grid-row:1 / 6"></div><div class="gl" style="grid-column:7;grid-row:1 / 6"></div><div class="lb" style="grid-column:1;grid-row:2">Start</div><div class="b setup" style="grid-column:2;grid-row:2"><b>Setup</b><span>Requirements, then install</span></div><div class="b onb" style="grid-column:3;grid-row:2"><b>Onboarding call</b><span>Your team learns what and why</span></div><div class="lb" style="grid-column:1;grid-row:3">Recording</div><div class="b rec" style="grid-column:4 / 8;grid-row:3">Runs in the background, all four weeks</div><div class="lb" style="grid-column:1;grid-row:4">Reports</div><div class="b out" style="grid-column:4 / 8;grid-row:4">Every past week, open any time<small>updated weekly</small></div><div class="lb" style="grid-column:1;grid-row:5">Weekly call</div><div class="ck first" style="grid-column:4;grid-row:5"><i></i>Your manager + Silow</div><div class="ck" style="grid-column:5;grid-row:5"><i></i>Your manager + Silow</div><div class="ck" style="grid-column:6;grid-row:5"><i></i>Your manager + Silow</div><div class="ck" style="grid-column:7;grid-row:5"><i></i>Your manager + Silow</div><div class="db" style="grid-column:8;grid-row:2 / 6"><b>Debrief</b><span>Joint workshop with your team</span></div></div>
 </section>
 <section class="v31 v31-m">
   <div class="eyebrow rise">How we start <b>·</b> the first month is free</div>
