@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Silow — for insurance operations</title><!-- rev:ins-v32 -->
+<title>Silow — for insurance operations</title><!-- rev:ins-v34 -->
 <style>
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
@@ -504,6 +504,19 @@
 .v33-two .lv{ padding-top:14px; border-top:1px solid var(--line-2); font-size:clamp(16px,1.25vw,21px); color:var(--ink-2); }
 .v33-two .lv b{ font-weight:500; color:var(--ink); }
 @media (max-width:900px){ .v33-two{ grid-template-columns:1fr; width:100%; } }
+
+/* v34: short grouped key/value slides */
+.v34 h2{ font-size:clamp(44px,4.6vw,80px); }
+.v34-grid{ margin-top:5.5vh; display:grid; gap:18px; width:min(1160px,86vw); text-align:left; }
+.v34-grid.n2{ grid-template-columns:1fr 1fr; }
+.v34-g{ padding:26px 30px 14px; border-radius:18px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); }
+.v34-g .h{ font-family:var(--mono); font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+.v34-g .r{ display:grid; grid-template-columns:44% 1fr; gap:16px; padding:15px 0; border-top:1px solid var(--line); align-items:baseline; }
+.v34-g .r b{ font-size:clamp(18px,1.45vw,24px); font-weight:500; letter-spacing:-.015em; color:var(--ink); }
+.v34-g .r span{ font-size:clamp(16px,1.25vw,21px); color:var(--mute); line-height:1.35; }
+.v34-foot{ margin-top:4vh; font-size:clamp(17px,1.35vw,23px); color:var(--mute); letter-spacing:-.01em; }
+.v34-foot b{ color:var(--ink); font-weight:500; }
+@media (max-width:900px){ .v34-grid.n2{ grid-template-columns:1fr; width:100%; } .v34-g{ padding:20px 18px 8px; } .v34-g .r{ grid-template-columns:1fr; gap:2px; } }
 </style>
 </head>
 <body>
@@ -1130,52 +1143,21 @@
   </div>
   <p class="v31-foot rise d3">Same recorder, same reports, same quality. The difference is <b>where each step runs and who operates it</b>. The masking model always runs where the recordings are, because it has to see the screen to mask it.</p>
 </section>
-<section class="v31 v32-dep">
+<section class="v31 v34">
   <div class="eyebrow rise">Deployment <b>·</b> on your servers</div>
   <h2 class="rise d1">What you provide. <em>What we ship.</em></h2>
-  <div class="v31-two rise d2">
-    <div><div class="k">Your IT provides</div><ul>
-      <li><b>An app server</b> for one Docker Compose package</li>
-      <li><b>A GPU server</b> for the masking and analysis models</li>
-      <li><b>Storage:</b> S3-compatible, or a bucket in your cloud</li>
-      <li><b>A network route</b> from laptops to the intake service</li>
-      <li><b>Your device management</b> to push the recorder</li></ul></div>
-    <div><div class="k">Silow ships</div><ul>
-      <li><b>An image archive</b> that installs offline</li>
-      <li><b>Upgrades in place</b> that keep your config and data</li>
-      <li><b>Health-check scripts:</b> data freshness per stage, status per user and per report, chat access</li>
-      <li><b>Recorder installers:</b> silent EXE for Windows x64, DMG for Apple Silicon Macs</li>
-      <li><b>Engineering support</b> from our team</li></ul></div>
-  </div>
-  <p class="v31-foot rise d3">Hardware is sized from three numbers: <b>users, recorded hours a day, and how long you keep data.</b> We send the spec once the pilot scope is set.</p>
+  <div class="v34-grid n2 rise d2"><div class="v34-g"><div class="h">You provide</div><div class="r"><b>App server</b><span>Docker Compose</span></div><div class="r"><b>GPU server</b><span>Masking + analysis models</span></div><div class="r"><b>Storage</b><span>S3 or your cloud bucket</span></div><div class="r"><b>Rollout</b><span>Your device management</span></div></div><div class="v34-g"><div class="h">We ship</div><div class="r"><b>Package</b><span>Installs offline</span></div><div class="r"><b>Upgrades</b><span>In place, data kept</span></div><div class="r"><b>Health checks</b><span>Ready-made scripts</span></div><div class="r"><b>Support</b><span>Our engineers</span></div></div></div>
+  <p class="v34-foot rise d3">Hardware sized from <b>users, recorded hours and retention.</b></p>
 </section>
-<section class="v31 v32-dep">
+<section class="v31 v34">
   <div class="eyebrow rise">Deployment <b>·</b> on your servers</div>
-  <h2 class="rise d1">On the laptop, <em>and after it.</em></h2>
-  <div class="v31-two rise d2">
-    <div><div class="k">On each laptop</div><ul>
-      <li><b>Silent install</b> through Intune, SCCM or Jamf, with the server address and employee ID</li>
-      <li><b>Silent updates</b> over the current version, settings and recordings kept</li>
-      <li><b>Screen frames at intervals.</b> No keystrokes.</li>
-      <li><b>No pause button</b> if your admin policy turns it off</li></ul></div>
-    <div><div class="k">In your environment</div><ul>
-      <li><b>Masking</b> when your policy wants it, even inside the perimeter. It lowers exposure; it is not perfect anonymization, so we test it on your data</li>
-      <li><b>Raw recordings</b> can be deleted as soon as they are processed</li>
-      <li><b>Reports and chat</b> open only with an access token</li>
-      <li><b>People decide.</b> No automated decisions about employees</li></ul></div>
-  </div>
+  <h2 class="rise d1">Your rules. <em>Your controls.</em></h2>
+  <div class="v34-grid n2 rise d2"><div class="v34-g"><div class="h">On the laptop</div><div class="r"><b>Install</b><span>Silent, via Intune, SCCM, Jamf</span></div><div class="r"><b>Updates</b><span>Silent</span></div><div class="r"><b>Captured</b><span>Screen frames, no keystrokes</span></div><div class="r"><b>Pause</b><span>Your admin decides</span></div></div><div class="v34-g"><div class="h">On the data</div><div class="r"><b>Masking</b><span>Optional, tested on your data</span></div><div class="r"><b>Raw recordings</b><span>Deleted after processing</span></div><div class="r"><b>Access</b><span>By token only</span></div><div class="r"><b>Decisions</b><span>Made by people</span></div></div></div>
 </section>
-<section class="v31 v32-dep">
-  <div class="eyebrow rise">Deployment <b>·</b> next step</div>
+<section class="v31 v34">
+  <div class="eyebrow rise">Next step</div>
   <h2 class="rise d1">One technical review. <em>Then the pilot.</em></h2>
-  <p class="v31-sub rise d1">Your infrastructure and security owners with our engineers, on your setup, before anyone is recorded.</p>
-  <div class="v31-cards c4 rise d2">
-    <div><div class="t">Capture and masking</div><div class="d">Set what is recorded. Test masking on your own sample screens.</div></div>
-    <div><div class="t">Hosting and model</div><div class="d">Trace every payload. Confirm where each model runs and that nothing else leaves.</div></div>
-    <div><div class="t">Retention and access</div><div class="d">Set deletion of raw recordings, who sees which report, and any support access.</div></div>
-    <div><div class="t">Owners and evidence</div><div class="d">Who runs what, how incidents are handled, what counts as accepted.</div></div>
-  </div>
-  <p class="v31-foot rise d3">Output: <b>one agreed architecture, a control checklist and an acceptance record.</b> Before it, we send the architecture, requirements, rollout, data-handling and support documents.</p>
+  <div class="v34-grid n2 rise d2"><div class="v34-g"><div class="h">We check together</div><div class="r"><b>Capture and masking</b><span>Tested on your screens</span></div><div class="r"><b>Hosting and model</b><span>Every payload traced</span></div><div class="r"><b>Retention and access</b><span>Set and verified</span></div><div class="r"><b>Owners</b><span>Named on both sides</span></div></div><div class="v34-g"><div class="h">You get</div><div class="r"><b>Document pack</b><span>Sent before the review</span></div><div class="r"><b>Architecture</b><span>Agreed and documented</span></div><div class="r"><b>Control checklist</b><span>For your security team</span></div><div class="r"><b>Acceptance record</b><span>Signed before the pilot</span></div></div></div>
 </section>
 <section class="v31 v31-m">
   <div class="eyebrow rise">How we start <b>·</b> the first month is free</div>
