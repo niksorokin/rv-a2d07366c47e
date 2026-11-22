@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Silow — for insurance operations</title><!-- rev:ins-v30 -->
+<title>Silow — for insurance operations</title><!-- rev:ins-v31 -->
 <style>
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
@@ -412,6 +412,35 @@
 .m30-case .m30-row p{ margin:6px 0 0; font-size:clamp(16px,1.2vw,20px); line-height:1.42; color:var(--ink-2); }
 .m30-case .m30-row p b{ font-weight:500; color:var(--ink); }
 @media (max-width:900px){ .s-prod .lvl{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px 0; } .s-prod .lvl span{ white-space:normal; } .s-prod .lvl span + span::before{ display:none; } .s-prod .lvl span{ margin:0 6px; } .m30-goals, .m30-cases{ grid-template-columns:1fr; width:100%; } .m30-ph-in{ padding:18px; margin:14px; } .m30-case .m30-ck{ min-height:0; } }
+
+/* v31: deployment, month, demo, Q&A */
+.v31{ justify-content:center; padding:8vh 48px 5vh; }
+.v31 h2{ font-size:clamp(40px,4.2vw,72px); max-width:none; }
+.v31 .lvl{ margin-bottom:18px; }
+.v31-flow{ margin-top:5vh; display:flex; align-items:stretch; justify-content:center; gap:10px; width:min(1320px,92vw); }
+.v31-flow > div{ flex:1 1 0; display:flex; flex-direction:column; gap:10px; padding:18px 18px 20px; border-radius:14px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); text-align:left; }
+.v31-flow i{ font-style:normal; width:24px; height:24px; border-radius:50%; display:grid; place-items:center; background:var(--accent); color:#fff; font-family:var(--mono); font-size:12px; }
+.v31-flow span{ font-size:clamp(16px,1.25vw,21px); font-weight:500; letter-spacing:-.01em; line-height:1.3; color:var(--ink); }
+.v31-flow > b{ align-self:center; color:var(--faint); font-weight:400; font-size:22px; }
+.v31-cards{ margin-top:4.5vh; display:grid; gap:14px; width:min(1280px,90vw); text-align:left; }
+.v31-cards.c3{ grid-template-columns:repeat(3,1fr); } .v31-cards.c4{ grid-template-columns:repeat(4,1fr); }
+.v31-cards > div{ padding:22px 22px 24px; border-radius:16px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); }
+.v31-cards .t{ font-size:clamp(19px,1.5vw,25px); font-weight:500; letter-spacing:-.02em; color:var(--ink); line-height:1.15; }
+.v31-cards .d{ margin-top:10px; font-size:clamp(15px,1.12vw,19px); line-height:1.42; color:var(--mute); }
+.v31-rows{ margin-top:4.5vh; width:min(1100px,88vw); text-align:left; border-top:1px solid var(--line-2); }
+.v31-rows > div{ display:grid; grid-template-columns:minmax(200px,30%) 1fr; gap:24px; padding:16px 4px; border-bottom:1px solid var(--line-2); }
+.v31-rows b{ font-size:clamp(17px,1.3vw,22px); font-weight:500; color:var(--ink); letter-spacing:-.01em; }
+.v31-rows span{ font-size:clamp(16px,1.2vw,20px); line-height:1.42; color:var(--ink-2); }
+.v31-foot{ margin-top:4vh; font-size:clamp(17px,1.3vw,22px); color:var(--mute); letter-spacing:-.01em; max-width:1100px; }
+.v31-foot b{ color:var(--ink); font-weight:500; }
+.v31-qa h2{ font-size:clamp(64px,7vw,128px); }
+@media (max-width:900px){
+  .v31{ padding:12vh 16px 6vh; }
+  .v31-flow{ flex-direction:column; width:100%; } .v31-flow > b{ transform:rotate(90deg); }
+  .v31-cards.c3, .v31-cards.c4{ grid-template-columns:1fr; width:100%; }
+  .v31-rows{ width:100%; } .v31-rows > div{ grid-template-columns:1fr; gap:4px; }
+  .v31 .lvl{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px 0; }
+}
 </style>
 </head>
 <body>
@@ -428,145 +457,6 @@
   <div class="eyebrow rise in d1">Silow · for insurance operations</div>
   <h1 class="rise in d2">See which step<br><em>is costing you the time.</em></h1>
   <p class="lede rise in d3">Silow records how work runs across your apps and shows <b>what&nbsp;to&nbsp;automate&nbsp;first.</b></p>
-</section>
-<section class="s-rec">
-    <div class="eyebrow rise">How we do it <b>·</b> the app</div>
-    <h2 class="rise d1">A tiny recorder.<br><em>Every app, every task.</em></h2>
-    <div class="facts rise d2"><span>Windows · macOS · Linux</span><span>1-minute install</span><span>1–2% CPU</span><span>No connectors</span></div>
-    <div class="rec-wrap rise d3">
-      <div class="rframe"><img src="./assets/product-recording-win.png" alt="A Windows workday being recorded by Silow"><span class="ring" aria-hidden="true"></span></div>
-      <figure class="rec-zoom"><div class="zf"><img src="./assets/recorder-tray-win.png" alt="The Silow recorder in the Windows system tray"></div><figcaption>The whole recorder.<br><b>One icon in the tray.</b></figcaption></figure>
-    </div>
-    <p class="m30-opt rise d3"><b>Pause is optional.</b> Your admin decides whether employees get a pause button.</p>
-  </section>
-<section class="s-sec">
-  <div class="eyebrow rise">Security</div>
-  <h2 class="rise d1">Your data stays <em>under your control.</em></h2>
-  <div class="desk rise d2">
-    <div class="desk-in">
-      <div class="wcol">
-        <div class="wlab"><i>1</i>Recorded</div>
-        <div class="screen">
-          <div class="win">
-          <div class="wt"><span class="ic" style="background:#6D4AC9">C</span><span class="ttl">ClaimCenter — New claim</span><span class="ctl"><span><svg viewBox="0 0 10 10"><path d="M0 5h10" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><rect x=".5" y=".5" width="9" height="9" rx="1.5" fill="none" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="#333"/></svg></span></span></div>
-          <div class="wb">
-            <h4>Loss details <small>FNOL</small></h4>
-            <div class="fld"><label>Claimant</label><div>Dana Whitfield</div></div>
-            <div class="fld"><label>Policy no.</label><div>HM-AU-88104421</div></div>
-            <div class="fld"><label>Loss date</label><div>10/21/2026 · 4:15 PM</div></div>
-            <div class="fld"><label>Location</label><div>1180 Harbor Rd, Portland</div></div>
-            <div class="fld"><label>Loss type</label><div>Auto · rear-end collision</div></div>
-            <div class="fld ta"><label>Description</label><div>Rear-ended at the light. Other driver Mark Ortiz, police report PR-55821.</div></div>
-          </div>
-        </div>
-          <div class="taskbar" aria-hidden="true">
-      <div class="apps">
-        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="7.5" height="7.5" rx="1" fill="#1F6FEB"/><rect x="10.5" y="2" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="2" y="10.5" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="10.5" y="10.5" width="7.5" height="7.5" rx="1" fill="#3D8BF5"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="5" fill="none" stroke="#333" stroke-width="1.6"/><path d="M12.3 12.3L17 17" stroke="#333" stroke-width="1.6" stroke-linecap="round"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><path d="M2 5.5A1.5 1.5 0 013.5 4H8l1.6 1.8h6.9A1.5 1.5 0 0118 7.3v7.2A1.5 1.5 0 0116.5 16h-13A1.5 1.5 0 012 14.5z" fill="#F4B829"/><path d="M2 8h16v6.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 012 14.5z" fill="#FFCF4A"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><rect x="2" y="3" width="16" height="14" rx="2.5" fill="#0F6CBD"/><path d="M5 7.5l5 3.3 5-3.3" fill="none" stroke="#fff" stroke-width="1.4"/></svg></i>
-        <i class="on" ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#6D4AC9"/><path d="M12.5 7.2a3.6 3.6 0 100 5.6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="3" fill="#1D7A45"/><path d="M6.5 6.5l7 7M13.5 6.5l-7 7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg></i>
-        <i ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#3B5BFF"/><circle cx="10" cy="10" r="3.2" fill="#fff"/></svg></i>
-      </div>
-      <div class="tray"><span>4:16 PM</span><span>10/21/2026</span></div>
-    </div>
-        </div>
-      </div>
-      <div class="wcol">
-        <div class="wlab"><i>2</i>Masked<span class="m30-tag">optional</span></div>
-        <div class="screen">
-          <div class="win">
-          <div class="wt"><span class="ic" style="background:#6D4AC9">C</span><span class="ttl">ClaimCenter — New claim</span><span class="ctl"><span><svg viewBox="0 0 10 10"><path d="M0 5h10" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><rect x=".5" y=".5" width="9" height="9" rx="1.5" fill="none" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="#333"/></svg></span></span></div>
-          <div class="wb">
-            <h4>Loss details <small>FNOL</small></h4>
-            <div class="fld"><label>Claimant</label><div><span class="tok">NAME</span></div></div>
-            <div class="fld"><label>Policy no.</label><div><span class="tok">POLICY</span></div></div>
-            <div class="fld"><label>Loss date</label><div><span class="tok">DATE</span></div></div>
-            <div class="fld"><label>Location</label><div><span class="tok">ADDRESS</span></div></div>
-            <div class="fld"><label>Loss type</label><div>Auto · rear-end collision</div></div>
-            <div class="fld ta"><label>Description</label><div>Rear-ended at the light. Other driver <span class="tok">NAME</span>, police report <span class="tok">ID</span>.</div></div>
-          </div>
-        </div>
-          <div class="taskbar" aria-hidden="true">
-      <div class="apps">
-        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="7.5" height="7.5" rx="1" fill="#1F6FEB"/><rect x="10.5" y="2" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="2" y="10.5" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="10.5" y="10.5" width="7.5" height="7.5" rx="1" fill="#3D8BF5"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="5" fill="none" stroke="#333" stroke-width="1.6"/><path d="M12.3 12.3L17 17" stroke="#333" stroke-width="1.6" stroke-linecap="round"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><path d="M2 5.5A1.5 1.5 0 013.5 4H8l1.6 1.8h6.9A1.5 1.5 0 0118 7.3v7.2A1.5 1.5 0 0116.5 16h-13A1.5 1.5 0 012 14.5z" fill="#F4B829"/><path d="M2 8h16v6.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 012 14.5z" fill="#FFCF4A"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><rect x="2" y="3" width="16" height="14" rx="2.5" fill="#0F6CBD"/><path d="M5 7.5l5 3.3 5-3.3" fill="none" stroke="#fff" stroke-width="1.4"/></svg></i>
-        <i class="on" ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#6D4AC9"/><path d="M12.5 7.2a3.6 3.6 0 100 5.6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="3" fill="#1D7A45"/><path d="M6.5 6.5l7 7M13.5 6.5l-7 7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg></i>
-        <i ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#3B5BFF"/><circle cx="10" cy="10" r="3.2" fill="#fff"/></svg></i>
-      </div>
-      <div class="tray"><span>4:16 PM</span><span>10/21/2026</span></div>
-    </div>
-        </div>
-      </div>
-      <div class="wcol">
-        <div class="wlab"><i>3</i>Kept</div>
-        <div class="screen">
-          <div class="win">
-          <div class="wt"><span class="ic" style="background:#3B5BFF">S</span><span class="ttl">Silow — FNOL to claim set-up</span><span class="ctl"><span><svg viewBox="0 0 10 10"><path d="M0 5h10" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><rect x=".5" y=".5" width="9" height="9" rx="1.5" fill="none" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="#333"/></svg></span></span></div>
-          <div class="wb">
-            <h4>Steps and time <small>per notice</small></h4>
-            <div class="kept">
-              <div class="kr"><span>Read the email and attachments</span><b>3.7 min</b></div>
-              <div class="kr"><span>Find the policy, check coverage</span><b>4.5 min</b></div>
-              <div class="kr hot"><span>Create claim, re-key loss details</span><b>6.0 min</b></div>
-              <div class="kr"><span>Match and index attachments</span><b>5.6 min</b></div>
-              <div class="kr"><span>Triage and assign an adjuster</span><b>1.9 min</b></div>
-              <div class="kr"><span>Acknowledge to the claimant</span><b>1.9 min</b></div>
-              <div class="gone"><svg viewBox="0 0 14 14"><path d="M2 4h10M5 4V2.5h4V4M3.5 4l.7 8h5.6l.7-8" fill="none" stroke="#8a8a8a" stroke-width="1.2"/></svg>Screenshot deleted</div>
-            </div>
-          </div>
-        </div>
-          <div class="taskbar" aria-hidden="true">
-      <div class="apps">
-        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="7.5" height="7.5" rx="1" fill="#1F6FEB"/><rect x="10.5" y="2" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="2" y="10.5" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="10.5" y="10.5" width="7.5" height="7.5" rx="1" fill="#3D8BF5"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="5" fill="none" stroke="#333" stroke-width="1.6"/><path d="M12.3 12.3L17 17" stroke="#333" stroke-width="1.6" stroke-linecap="round"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><path d="M2 5.5A1.5 1.5 0 013.5 4H8l1.6 1.8h6.9A1.5 1.5 0 0118 7.3v7.2A1.5 1.5 0 0116.5 16h-13A1.5 1.5 0 012 14.5z" fill="#F4B829"/><path d="M2 8h16v6.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 012 14.5z" fill="#FFCF4A"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><rect x="2" y="3" width="16" height="14" rx="2.5" fill="#0F6CBD"/><path d="M5 7.5l5 3.3 5-3.3" fill="none" stroke="#fff" stroke-width="1.4"/></svg></i>
-        <i ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#6D4AC9"/><path d="M12.5 7.2a3.6 3.6 0 100 5.6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></i>
-        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="3" fill="#1D7A45"/><path d="M6.5 6.5l7 7M13.5 6.5l-7 7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg></i>
-        <i class="on" ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#3B5BFF"/><circle cx="10" cy="10" r="3.2" fill="#fff"/></svg></i>
-      </div>
-      <div class="tray"><span>4:17 PM</span><span>10/21/2026</span></div>
-    </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <p class="quiet rise d3">Leadership sees company and team reports, managers their own teams. <b>Names are anonymous by default.</b> <span class="m30-mask"><b>Masking is optional</b> on your servers.</span></p>
-  <p class="quiet ephi rise d3">We have experience securely storing and processing electronic protected health information (ePHI) in line with HIPAA requirements.</p>
-</section>
-<section class="s-dep">
-  <div class="eyebrow rise">Deployment</div>
-  <h2 class="rise d1">Our servers <em>or yours.</em></h2>
-  <div class="dep rise d2">
-    <div>
-      <div class="k">Silow-hosted</div>
-      <div class="t">Fastest start.</div>
-      <div class="b">Install the recorder and go. Raw captures are deleted within 48 hours.</div>
-    </div>
-    <div>
-      <div class="k">On your servers</div>
-      <div class="t">Inside your perimeter.</div>
-      <div class="b">One Docker Compose package with SSO. Your data never leaves your perimeter and never reaches Silow.</div>
-    </div>
-  </div>
-</section>
-<section class="s-month">
-  <div class="eyebrow rise">How we start</div>
-  <h2 class="rise d1">First month <em>free.</em></h2>
-  <div class="sub rise d1">20–30 people<span>·</span>one team you choose<span>·</span>results after week one</div>
-  <div class="m31 rise d2" aria-label="Four weeks: onboarding and install in parallel, recording all month, reports from week two, a manager checkpoint every week, a debrief at the end">
-    <div class="m31-grid"><i></i><i></i><i></i><i></i></div>
-    <div class="m31-bar m31-ob" style="left:0">Onboarding + install</div>
-    <div class="m31-bar m31-rec" style="left:0;width:100%">Recording runs in the background</div>
-    <div class="m31-bar m31-out" style="left:25%;width:75%">Reports · process maps · automation plan<small>updated weekly</small></div>
-    <div class="m31-ms"><div class="m31-ck" style="left:25%"><i></i>Checkpoint</div><div class="m31-ck" style="left:50%"><i></i>Checkpoint</div><div class="m31-ck" style="left:75%"><i></i>Checkpoint</div><div class="m31-db">Debrief</div></div>
-    <div class="m31-axis"><span style="left:12.5%">Week 1</span><span style="left:37.5%">Week 2</span><span style="left:62.5%">Week 3</span><span style="left:87.5%">Week 4</span></div>
-  </div>
 </section>
 <section class="dark s-layers s-iso">
   <h2 class="rise">From work screens <em>to any report.</em></h2>
@@ -1035,70 +925,204 @@
     <li><i>03</i><b>Any output</b><span>Reports, maps and plans</span></li>
   </ol>
 </section>
-<section class="s-depth s-prod">
-  <div class="lvl"><span class="on"><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class="on"><i>3</i>People visibility</span></div>
-  <h2>Home: what matters, the moment you open it.</h2>
-  <p class="line">The biggest findings across teams, processes and people on one screen. <b>No guide needed to start.</b></p>
-  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Home screen</div><div class="m30-ph-r">#home</div><ul><li>Top insights across the company</li><li>Where to go next: processes, teams, people</li><li>Ask Silow about any number</li></ul></div></div>
-</section>
-<section class="s-depth s-prod">
-  <div class="lvl"><span class="on"><i>1</i>Process documentation</span><span class=""><i>2</i>Automation plan</span><span class=""><i>3</i>People visibility</span></div>
-  <h2>One process: documented from how it really runs.</h2>
-  <p class="line">Every step, its system and its time. <b>Export the whole process, or one step, as documentation.</b></p>
-  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Process page · export</div><div class="m30-ph-r">#process/…</div><ul><li>Every step with measured time and the people who run it</li><li>Fastest path and exceptions inside each step</li><li>Export: Word, PDF, Visio, Markdown, CSV</li></ul></div></div>
-</section>
-<section class="s-depth s-prod">
-  <div class="lvl"><span class=""><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class=""><i>3</i>People visibility</span></div>
-  <h2>Process &amp; automation: every process, ranked by hours back.</h2>
-  <p class="line">Each team’s processes, what can be automated in each, and <b>what it returns a week.</b></p>
-  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Process &amp; automation</div><div class="m30-ph-r">#plan</div><ul><li>Automation plan by team → process → hours and money back</li><li>Process maps with a short description of each</li><li>Open any process to see its steps</li></ul></div></div>
-</section>
-<section class="s-depth s-prod">
-  <div class="lvl"><span class=""><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class=""><i>3</i>People visibility</span></div>
-  <h2>The step to automate, with a brief your team can build from.</h2>
-  <p class="line">The slow step, the actions inside it and what an agent would take over. <b>Input for building the agent.</b></p>
-  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Process step · automation brief</div><div class="m30-ph-r">#case/…?step=…</div><ul><li>The step flagged for automation, with time and volume</li><li>What an agent takes over, what stays human</li><li>Export the brief for the build team</li></ul></div></div>
-</section>
-<section class="s-depth s-prod">
-  <div class="lvl"><span class=""><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class="on"><i>3</i>People visibility</span></div>
-  <h2>Team: recommendations for each team.</h2>
-  <p class="line">Where the team’s week goes and <b>what to change first</b>, with the processes behind it.</p>
-  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Team report</div><div class="m30-ph-r">#team/…</div><ul><li>Recommendations first, then the time breakdown</li><li>Processes and handoffs the team owns</li><li>Who does what, compared with the team median</li></ul></div></div>
-</section>
-<section class="s-depth s-prod">
-  <div class="lvl"><span class=""><i>1</i>Process documentation</span><span class=""><i>2</i>Automation plan</span><span class="on"><i>3</i>People visibility</span></div>
-  <h2>People: every person, and what would help them.</h2>
-  <p class="line">All employees in one list; open anyone for <b>their own recommendations</b>, time and processes.</p>
-  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · People · personal report</div><div class="m30-ph-r">#people → #person/…</div><ul><li>Everyone, with hours, main work and tasks completed</li><li>Personal recommendations for each person</li><li>Visibility set by your admins: names or anonymous</li></ul></div></div>
-</section>
-<section class="s-where">
-    <div class="eyebrow rise">Where it helps <b>·</b> examples</div>
-    <h2 class="rise d1" style="font-size:clamp(44px,4.8vw,80px); max-width:none;">Anywhere work runs<br><em>between systems.</em></h2>
-    <div class="roles roles-nine rise d2">
-      <div><div class="r">Month-end close</div><div class="d">Reconciliation and the operating pack rebuilt in Excel, month after month.</div></div>
-      <div><div class="r">Reconciliation &amp; payments</div><div class="d">GL against the bank feed, matched line by line; exceptions take the time.</div></div>
-      <div><div class="r">Accounts payable</div><div class="d">Invoice lines typed from PDFs that already arrive as data.</div></div>
-      <div><div class="r">FP&amp;A &amp; reporting</div><div class="d">The same numbers pulled from the same systems for every pack.</div></div>
-      <div><div class="r">Procurement &amp; vendor ops</div><div class="d">Approvals chased by email; status lives in one spreadsheet.</div></div>
-      <div><div class="r">Reinsurance &amp; recoveries</div><div class="d">Bordereaux built by hand from extracts.</div></div>
-      <div><div class="r">M&amp;A analytics</div><div class="d">Pre- and post-acquisition process and technology assessment.</div></div>
-      <div><div class="r">Claims operations</div><div class="d">Documents chased and matched to the file.</div></div>
-      <div><div class="r">Underwriting support</div><div class="d">Submissions re-typed before anyone decides.</div></div>
+<section class="s-rec">
+    <div class="eyebrow rise">How we do it <b>·</b> the app</div>
+    <h2 class="rise d1">A tiny recorder.<br><em>Every app, every task.</em></h2>
+    <div class="facts rise d2"><span>Windows · macOS · Linux</span><span>1-minute install</span><span>1–2% CPU</span><span>No connectors</span><span>No keystrokes</span></div>
+    <div class="rec-wrap rise d3">
+      <div class="rframe"><img src="./assets/product-recording-win.png" alt="A Windows workday being recorded by Silow"><span class="ring" aria-hidden="true"></span></div>
+      <figure class="rec-zoom"><div class="zf"><img src="./assets/recorder-tray-win.png" alt="The Silow recorder in the Windows system tray"></div><figcaption>The whole recorder.<br><b>One icon in the tray.</b></figcaption></figure>
     </div>
+    <p class="m30-opt rise d3"><b>Pause is optional.</b> Your admin decides whether employees get a pause button.</p>
   </section>
-<section class="s-cases">
-  <div class="eyebrow rise">How teams use it <b>·</b> examples, names withheld</div>
-  <h2 class="rise d1">What the recording showed. <em>What came next.</em></h2>
-  <div class="m30-cases rise d2"><div class="m30-case"><div class="m30-ck">Delivery &amp; mobility · operations team, 8 people</div><div class="m30-row"><span>Seen</span><p>Everyone had an AI assistant. The recording found it in almost none of the work: <b>close to 0% of time.</b></p></div><div class="m30-row"><span>Next</span><p>Six team playbooks built from the work the team actually does, each with a ready prompt.</p></div></div><div class="m30-case"><div class="m30-ck">Licensing legal firm · 9 people, 3 teams</div><div class="m30-row"><span>Seen</span><p>Work waited <b>6.4× longer</b> whenever it passed to another person. One regulator PDF was re-attached by hand five times.</p></div><div class="m30-row"><span>Next</span><p>An agent design for each team, built around those handoffs, plus a connector so their AI can query the data.</p></div></div><div class="m30-case"><div class="m30-ck">Law firm · UAE</div><div class="m30-row"><span>Seen</span><p>In one week: documents were only <b>20–30% of lawyers’ time.</b> Client back-and-forth and invoicing were the bottleneck.</p></div><div class="m30-row"><span>Next</span><p>An intake agent that requests and checks client documents and drafts the invoice. A lawyer approves each case.</p></div></div></div>
+<section class="s-sec">
+  <div class="eyebrow rise">Security</div>
+  <h2 class="rise d1">Your data stays <em>under your control.</em></h2>
+  <div class="desk rise d2">
+    <div class="desk-in">
+      <div class="wcol">
+        <div class="wlab"><i>1</i>Recorded</div>
+        <div class="screen">
+          <div class="win">
+          <div class="wt"><span class="ic" style="background:#6D4AC9">C</span><span class="ttl">ClaimCenter — New claim</span><span class="ctl"><span><svg viewBox="0 0 10 10"><path d="M0 5h10" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><rect x=".5" y=".5" width="9" height="9" rx="1.5" fill="none" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="#333"/></svg></span></span></div>
+          <div class="wb">
+            <h4>Loss details <small>FNOL</small></h4>
+            <div class="fld"><label>Claimant</label><div>Dana Whitfield</div></div>
+            <div class="fld"><label>Policy no.</label><div>HM-AU-88104421</div></div>
+            <div class="fld"><label>Loss date</label><div>10/21/2026 · 4:15 PM</div></div>
+            <div class="fld"><label>Location</label><div>1180 Harbor Rd, Portland</div></div>
+            <div class="fld"><label>Loss type</label><div>Auto · rear-end collision</div></div>
+            <div class="fld ta"><label>Description</label><div>Rear-ended at the light. Other driver Mark Ortiz, police report PR-55821.</div></div>
+          </div>
+        </div>
+          <div class="taskbar" aria-hidden="true">
+      <div class="apps">
+        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="7.5" height="7.5" rx="1" fill="#1F6FEB"/><rect x="10.5" y="2" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="2" y="10.5" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="10.5" y="10.5" width="7.5" height="7.5" rx="1" fill="#3D8BF5"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="5" fill="none" stroke="#333" stroke-width="1.6"/><path d="M12.3 12.3L17 17" stroke="#333" stroke-width="1.6" stroke-linecap="round"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><path d="M2 5.5A1.5 1.5 0 013.5 4H8l1.6 1.8h6.9A1.5 1.5 0 0118 7.3v7.2A1.5 1.5 0 0116.5 16h-13A1.5 1.5 0 012 14.5z" fill="#F4B829"/><path d="M2 8h16v6.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 012 14.5z" fill="#FFCF4A"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><rect x="2" y="3" width="16" height="14" rx="2.5" fill="#0F6CBD"/><path d="M5 7.5l5 3.3 5-3.3" fill="none" stroke="#fff" stroke-width="1.4"/></svg></i>
+        <i class="on" ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#6D4AC9"/><path d="M12.5 7.2a3.6 3.6 0 100 5.6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="3" fill="#1D7A45"/><path d="M6.5 6.5l7 7M13.5 6.5l-7 7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg></i>
+        <i ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#3B5BFF"/><circle cx="10" cy="10" r="3.2" fill="#fff"/></svg></i>
+      </div>
+      <div class="tray"><span>4:16 PM</span><span>10/21/2026</span></div>
+    </div>
+        </div>
+      </div>
+      <div class="wcol">
+        <div class="wlab"><i>2</i>Masked<span class="m30-tag">optional</span></div>
+        <div class="screen">
+          <div class="win">
+          <div class="wt"><span class="ic" style="background:#6D4AC9">C</span><span class="ttl">ClaimCenter — New claim</span><span class="ctl"><span><svg viewBox="0 0 10 10"><path d="M0 5h10" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><rect x=".5" y=".5" width="9" height="9" rx="1.5" fill="none" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="#333"/></svg></span></span></div>
+          <div class="wb">
+            <h4>Loss details <small>FNOL</small></h4>
+            <div class="fld"><label>Claimant</label><div><span class="tok">NAME</span></div></div>
+            <div class="fld"><label>Policy no.</label><div><span class="tok">POLICY</span></div></div>
+            <div class="fld"><label>Loss date</label><div><span class="tok">DATE</span></div></div>
+            <div class="fld"><label>Location</label><div><span class="tok">ADDRESS</span></div></div>
+            <div class="fld"><label>Loss type</label><div>Auto · rear-end collision</div></div>
+            <div class="fld ta"><label>Description</label><div>Rear-ended at the light. Other driver <span class="tok">NAME</span>, police report <span class="tok">ID</span>.</div></div>
+          </div>
+        </div>
+          <div class="taskbar" aria-hidden="true">
+      <div class="apps">
+        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="7.5" height="7.5" rx="1" fill="#1F6FEB"/><rect x="10.5" y="2" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="2" y="10.5" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="10.5" y="10.5" width="7.5" height="7.5" rx="1" fill="#3D8BF5"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="5" fill="none" stroke="#333" stroke-width="1.6"/><path d="M12.3 12.3L17 17" stroke="#333" stroke-width="1.6" stroke-linecap="round"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><path d="M2 5.5A1.5 1.5 0 013.5 4H8l1.6 1.8h6.9A1.5 1.5 0 0118 7.3v7.2A1.5 1.5 0 0116.5 16h-13A1.5 1.5 0 012 14.5z" fill="#F4B829"/><path d="M2 8h16v6.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 012 14.5z" fill="#FFCF4A"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><rect x="2" y="3" width="16" height="14" rx="2.5" fill="#0F6CBD"/><path d="M5 7.5l5 3.3 5-3.3" fill="none" stroke="#fff" stroke-width="1.4"/></svg></i>
+        <i class="on" ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#6D4AC9"/><path d="M12.5 7.2a3.6 3.6 0 100 5.6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="3" fill="#1D7A45"/><path d="M6.5 6.5l7 7M13.5 6.5l-7 7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg></i>
+        <i ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#3B5BFF"/><circle cx="10" cy="10" r="3.2" fill="#fff"/></svg></i>
+      </div>
+      <div class="tray"><span>4:16 PM</span><span>10/21/2026</span></div>
+    </div>
+        </div>
+      </div>
+      <div class="wcol">
+        <div class="wlab"><i>3</i>Kept</div>
+        <div class="screen">
+          <div class="win">
+          <div class="wt"><span class="ic" style="background:#3B5BFF">S</span><span class="ttl">Silow — FNOL to claim set-up</span><span class="ctl"><span><svg viewBox="0 0 10 10"><path d="M0 5h10" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><rect x=".5" y=".5" width="9" height="9" rx="1.5" fill="none" stroke="#333"/></svg></span><span><svg viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="#333"/></svg></span></span></div>
+          <div class="wb">
+            <h4>Steps and time <small>per notice</small></h4>
+            <div class="kept">
+              <div class="kr"><span>Read the email and attachments</span><b>3.7 min</b></div>
+              <div class="kr"><span>Find the policy, check coverage</span><b>4.5 min</b></div>
+              <div class="kr hot"><span>Create claim, re-key loss details</span><b>6.0 min</b></div>
+              <div class="kr"><span>Match and index attachments</span><b>5.6 min</b></div>
+              <div class="kr"><span>Triage and assign an adjuster</span><b>1.9 min</b></div>
+              <div class="kr"><span>Acknowledge to the claimant</span><b>1.9 min</b></div>
+              <div class="gone"><svg viewBox="0 0 14 14"><path d="M2 4h10M5 4V2.5h4V4M3.5 4l.7 8h5.6l.7-8" fill="none" stroke="#8a8a8a" stroke-width="1.2"/></svg>Screenshot deleted</div>
+            </div>
+          </div>
+        </div>
+          <div class="taskbar" aria-hidden="true">
+      <div class="apps">
+        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="7.5" height="7.5" rx="1" fill="#1F6FEB"/><rect x="10.5" y="2" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="2" y="10.5" width="7.5" height="7.5" rx="1" fill="#2B7DF0"/><rect x="10.5" y="10.5" width="7.5" height="7.5" rx="1" fill="#3D8BF5"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="5" fill="none" stroke="#333" stroke-width="1.6"/><path d="M12.3 12.3L17 17" stroke="#333" stroke-width="1.6" stroke-linecap="round"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><path d="M2 5.5A1.5 1.5 0 013.5 4H8l1.6 1.8h6.9A1.5 1.5 0 0118 7.3v7.2A1.5 1.5 0 0116.5 16h-13A1.5 1.5 0 012 14.5z" fill="#F4B829"/><path d="M2 8h16v6.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 012 14.5z" fill="#FFCF4A"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><rect x="2" y="3" width="16" height="14" rx="2.5" fill="#0F6CBD"/><path d="M5 7.5l5 3.3 5-3.3" fill="none" stroke="#fff" stroke-width="1.4"/></svg></i>
+        <i ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#6D4AC9"/><path d="M12.5 7.2a3.6 3.6 0 100 5.6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></i>
+        <i><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="3" fill="#1D7A45"/><path d="M6.5 6.5l7 7M13.5 6.5l-7 7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg></i>
+        <i class="on" ><svg viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="4" fill="#3B5BFF"/><circle cx="10" cy="10" r="3.2" fill="#fff"/></svg></i>
+      </div>
+      <div class="tray"><span>4:17 PM</span><span>10/21/2026</span></div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="quiet rise d3">Leadership sees company and team reports, managers their own teams. <b>Names are anonymous by default.</b> <span class="m30-mask"><b>Masking is optional</b> on your servers.</span></p>
+  <p class="quiet ephi rise d3">Health data is part of the review from day one: we agree what is recorded and how it is masked and stored, then test on your data before the pilot.</p>
 </section>
-<section class="s-cases">
-  <div class="eyebrow rise">How teams use it <b>·</b> examples, names withheld</div>
-  <h2 class="rise d1">Same data, <em>different uses.</em></h2>
-  <div class="m30-cases rise d2"><div class="m30-case"><div class="m30-ck">Healthcare back office · US, fully on-premises</div><div class="m30-row"><span>Use</span><p>Record experienced staff for a month, then draft <b>day-by-day onboarding guides</b> for new hires.</p></div><div class="m30-row"><span>Next</span><p>Their own team automates from the same data. It runs on their servers, so <b>nothing reaches Silow.</b></p></div></div><div class="m30-case"><div class="m30-ck">Accounting services · 18 people</div><div class="m30-row"><span>Seen</span><p>Tools the company had already rolled out were used <b>very unevenly</b> across teams. Sorting task queues and supporting work took <b>up to 27%</b> of a team’s time.</p></div><div class="m30-row"><span>Next</span><p>Three first agents: a follow-up email and proposal after each call, a bot answering staff questions in team chats, a status summary for one accounting team. A person sends.</p></div></div><div class="m30-case"><div class="m30-ck">Accounting firm · UAE</div><div class="m30-row"><span>Built</span><p>One shared knowledge base for the team (mail, meeting notes, tasks) with an agent that writes <b>weekly summaries and a morning brief.</b></p></div><div class="m30-row"><span>Next</span><p>Client onboarding, from documents to the engagement letter, in testing.</p></div></div></div>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="on"><i>1</i>Our servers</span><span class=""><i>2</i>Your servers</span></div>
+  <h2 class="rise d1">On our servers. <em>The fastest start.</em></h2>
+  <div class="v31-flow rise d2"><div><i>1</i><span>Recorder on each laptop</span></div><b>→</b><div><i>2</i><span>Silow storage in the US</span></div><b>→</b><div><i>3</i><span>Our model on our GPUs</span></div><b>→</b><div><i>4</i><span>Reports and chat</span></div></div>
+  <div class="v31-cards c3  rise d2"><div><div class="t">Where it runs</div><div class="d">Silow infrastructure on OVHcloud, in the US.</div></div><div><div class="t">Which AI</div><div class="d">Our own model. No outside AI providers.</div></div><div><div class="t">Who runs it</div><div class="d">We install, run and update everything.</div></div></div>
+  <p class="v31-foot rise d3">Same recorder, same reports, same quality on both options. <b>Only where it runs and who operates it change.</b></p>
 </section>
-<section class="s-close">
-  <h2 class="rise">Pick a team.<br><em>Start the free month.</em></h2>
-  <p class="lede rise d1">20–30 people and one process you care about. Debrief at the end of the month.</p>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
+  <h2 class="rise d1">On your servers. <em>Nothing leaves your perimeter.</em></h2>
+  <div class="v31-flow rise d2"><div><i>1</i><span>Recorder on each laptop</span></div><b>→</b><div><i>2</i><span>Video goes straight to your storage</span></div><b>→</b><div><i>3</i><span>Your server processes it on a schedule</span></div><b>→</b><div><i>4</i><span>The model runs on your GPU server</span></div><b>→</b><div><i>5</i><span>Reports and chat inside your network</span></div></div>
+  <p class="v31-foot rise d3">No data reaches Silow. Already running this way at a US claims-support company: <b>their IT installed it, the data stays with them.</b></p>
+</section>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
+  <h2 class="rise d1">You install and run it. <em>We support you.</em></h2>
+  <div class="v31-cards c3  rise d2"><div><div class="t">One package</div><div class="d">Containers for intake, processing, reports, chat, database and storage. Installs offline from an archive.</div></div><div><div class="t">Your storage</div><div class="d">S3-compatible storage on your VM, or a bucket in your own cloud.</div></div><div><div class="t">Updates in place</div><div class="d">A new version installs on top and keeps your settings and data.</div></div><div><div class="t">Health checks included</div><div class="d">Scripts show data freshness, status per user and per report, and chat access.</div></div><div><div class="t">Support from Silow</div><div class="d">Update archives, instructions and help with any issue. Remote access only if you choose to give it.</div></div><div><div class="t">Sized to your scope</div><div class="d">Users, recorded hours and retention set the hardware. We recommend it once the pilot scope is agreed.</div></div></div>
+</section>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
+  <h2 class="rise d1">Rolling it out <em>to every laptop.</em></h2>
+  <div class="v31-cards c3  rise d2"><div><div class="t">Windows and macOS</div><div class="d">Windows x64 and Apple Silicon Macs.</div></div><div><div class="t">Silent install</div><div class="d">Your admins push it with the server address and employee ID, through the tools you already use.</div></div><div><div class="t">Silent updates</div><div class="d">Installed over the current version. Settings and recordings stay.</div></div><div><div class="t">Runs in the background</div><div class="d">Nothing for the employee to set up.</div></div><div><div class="t">Pause is your call</div><div class="d">An admin policy decides whether employees can pause recording.</div></div><div><div class="t">Your rules for notice</div><div class="d">You decide how employees are told. We write it into the agreement.</div></div></div>
+</section>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
+  <h2 class="rise d1">What is recorded, <em>and who can see it.</em></h2>
+  <div class="v31-rows rise d2">
+    <div><b>Recorded</b><span>The screen, at intervals. No keystrokes. Who and what gets recorded is agreed with you.</span></div>
+    <div><b>Masking</b><span>Sensitive fields can be masked even inside your perimeter, if your policy asks for it.</span></div>
+    <div><b>Retention</b><span>Set to your policy. Raw recordings can be deleted as soon as they are processed.</span></div>
+    <div><b>Access</b><span>Roles and audit agreed with you. The data opens only with an access token.</span></div>
+    <div><b>Model</b><span>Runs in your environment, next to your data.</span></div>
+    <div><b>People decide</b><span>People review every finding. No automated decisions about employees.</span></div>
+  </div>
+</section>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
+  <h2 class="rise d1">For your security review, <em>before we meet.</em></h2>
+  <div class="v31-rows rise d2">
+    <div><b>Architecture and data flow</b><span>Components, where data is stored and processed, network connections.</span></div>
+    <div><b>Deployment requirements</b><span>App server, GPU server, storage and network. Sizing once the scope is agreed.</span></div>
+    <div><b>Recorder rollout</b><span>Silent install, supported systems, pause control, updates.</span></div>
+    <div><b>Data handling</b><span>What is recorded, masking, retention and access, set to your policy.</span></div>
+    <div><b>Support model</b><span>How we update and support it. Remote access only by agreement.</span></div>
+  </div>
+  <p class="v31-foot rise d3">Then: NDA <b>→</b> document pack <b>→</b> one joint technical session <b>→</b> pilot with 20–50 people.</p>
+</section>
+<section class="v31 v31-m">
+  <div class="eyebrow rise">How we start <b>·</b> the first month is free</div>
+  <div class="lvl"><span class="on"><i>1</i>Onboarding</span><span class=""><i>2</i>Four weeks</span><span class=""><i>3</i>Debrief</span></div>
+  <h2 class="rise d1">One onboarding call. <em>Install right after.</em></h2>
+  <div class="v31-cards c4  rise d2"><div><div class="t">Who takes part</div><div class="d">20–50 people who run the processes you most want to see, and one manager on your side who owns the pilot.</div></div><div><div class="t">The call</div><div class="d">Together we agree the team, the goal and any custom dashboards. We finish the setup on our side.</div></div><div><div class="t">Your people</div><div class="d">A short intro for managers and employees on what this is for. You approve the wording first.</div></div><div><div class="t">Install</div><div class="d">Your IT pushes the recorder right after the call. Recording starts that day.</div></div></div>
+</section>
+<section class="v31 v31-m">
+  <div class="eyebrow rise">How we start <b>·</b> weeks 1 to 4</div>
+  <div class="lvl"><span class="done"><i>1</i>Onboarding</span><span class="on"><i>2</i>Four weeks</span><span class=""><i>3</i>Debrief</span></div>
+  <h2 class="rise d1">Every week, <em>a checkpoint with your manager.</em></h2>
+  <div class="v31-cards c3  rise d2"><div><div class="t">From week 1</div><div class="d">Reports, process maps and the automation plan go live, and update every week.</div></div><div><div class="t">Every week</div><div class="d">A short call with your manager, or with the whole team: what the data shows and what to look at next.</div></div><div><div class="t">Around week 2</div><div class="d">A walkthrough with your managers: how to read the reports and what to ask Silow.</div></div></div>
+</section>
+<section class="v31 v31-m">
+  <div class="eyebrow rise">How we start <b>·</b> end of the month</div>
+  <div class="lvl"><span class="done"><i>1</i>Onboarding</span><span class="done"><i>2</i>Four weeks</span><span class="on"><i>3</i>Debrief</span></div>
+  <h2 class="rise d1">One joint session. <em>The full picture.</em></h2>
+  <div class="v31-cards c4  rise d2"><div><div class="t">Process documentation</div><div class="d">Every step of the processes in scope, ready to export.</div></div><div><div class="t">People compared</div><div class="d">How different people run the same work, and who does it fastest.</div></div><div><div class="t">Automation plan</div><div class="d">Step by step: what to automate first and the hours it frees.</div></div><div><div class="t">A new view of your processes</div><div class="d">Where work waits, repeats or runs outside your systems.</div></div></div>
+</section>
+<section class="s-depth s-prod v31-demo">
+  <h2>Home and chat: <em>start from the answer.</em></h2>
+  <p class="line">It opens on what changed and what needs attention. Ask anything about the data in plain English.</p>
+  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Home + Ask Silow</div><div class="m30-ph-r">#home · #ask</div><ul><li>What changed this week and what needs attention</li><li>Where to go next: processes, teams, people</li><li>A question in plain English, answered from the data</li></ul></div></div>
+</section>
+<section class="s-depth s-prod v31-demo">
+  <h2>Processes: <em>everything you asked about.</em></h2>
+  <p class="line">Each step timed, the fastest way to do it, how people differ, and the step worth automating. Export to Word, PDF or Visio.</p>
+  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Process & automation</div><div class="m30-ph-r">#plan · #process/… · #case/…?step=…</div><ul><li>Every step with its time and the people who run it</li><li>Fastest path and exceptions inside a step</li><li>The step to automate, with a brief to build from</li><li>Export the process or one step as documentation</li></ul></div></div>
+</section>
+<section class="s-depth s-prod v31-demo">
+  <h2>Team: <em>where the week goes, and who is fastest.</em></h2>
+  <p class="line">Time by type of work, the processes the team owns, and how each person compares with the team.</p>
+  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Team report</div><div class="m30-ph-r">#team/…</div><ul><li>Recommendations for the team first</li><li>Time by work stream and by process</li><li>Each person against the team median, step by step</li></ul></div></div>
+</section>
+<section class="s-depth s-prod v31-demo">
+  <h2>Person: <em>one employee, in detail.</em></h2>
+  <p class="line">Their week, the tasks they finished, their time per step against the team, and what would help them.</p>
+  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Personal report</div><div class="m30-ph-r">#people → #person/…</div><ul><li>Hours, main work and tasks completed</li><li>Time per step compared with the team</li><li>Recommendations for this person</li></ul></div></div>
+</section>
+<section class="s-close v31-qa">
+  <h2 class="rise">Questions.</h2>
+  <p class="lede rise d1">Anything about the setup, the data or the pilot.</p>
   <div class="site rise d2">silow.ai</div>
 </section>
 </main>
