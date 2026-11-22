@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Silow — for insurance operations</title><!-- rev:ins-v37 -->
+<title>Silow — for insurance operations</title><!-- rev:ins-v38 -->
 <style>
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
@@ -590,6 +590,17 @@
   .v37-grid .c::before{ font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; margin-right:10px; opacity:.75; }
   .v37-grid .c.both::before{ content:"Both"; } .v37-grid .c.o::before{ content:"Silow"; } .v37-grid .c.y::before{ content:"Yours"; color:var(--accent); opacity:1; }
 }
+
+/* v38: onboarding steps */
+.v31-sub b{ color:var(--ink); font-weight:500; }
+.v38-steps{ margin-top:4.5vh; display:grid; grid-template-columns:repeat(3,1fr); gap:34px; width:min(1200px,88vw); text-align:left; position:relative; }
+.v38-steps > div{ position:relative; padding:24px 24px 22px; border-radius:16px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); }
+.v38-steps > div:not(:last-child)::after{ content:"→"; position:absolute; right:-24px; top:30px; color:var(--accent); font-size:20px; }
+.v38-steps i{ font-style:normal; width:26px; height:26px; border-radius:50%; display:grid; place-items:center; background:var(--accent); color:#fff; font-family:var(--mono); font-size:12px; }
+.v38-steps b{ display:block; margin-top:14px; font-size:clamp(21px,1.7vw,28px); font-weight:500; letter-spacing:-.02em; color:var(--ink); }
+.v38-steps ul{ margin:14px 0 0; padding:0; list-style:none; }
+.v38-steps li{ padding:9px 0; border-top:1px solid var(--line); font-size:clamp(15px,1.15vw,19px); line-height:1.35; color:var(--mute); }
+@media (max-width:900px){ .v38-steps{ grid-template-columns:1fr; gap:12px; width:100%; } .v38-steps > div::after{ display:none; } }
 </style>
 </head>
 <body>
@@ -1194,24 +1205,16 @@
   <h2 class="rise d1">Who does what.</h2>
   <div class="v35-tbl rise d2">
     <div class="j"></div><div class="hd y">Your IT</div><div class="hd o">Silow</div>
-    <div class="j">Servers</div><div class="c y">App server, GPU server, storage</div><div class="c o">Hardware spec for your scope</div><div class="j">Install</div><div class="c y">Runs it, offline</div><div class="c o">Package and instructions</div><div class="j">Recorder</div><div class="c y">Pushes it to laptops</div><div class="c o">Silent installers</div><div class="j">Updates</div><div class="c y">Applies them</div><div class="c o">Update archives</div><div class="j">Monitoring</div><div class="c y">Runs the health checks</div><div class="c o">Scripts and engineering support</div>
+    <div class="j">Recorder</div><div class="c y">Pushes it to laptops</div><div class="c o">Silent installers</div><div class="j">Updates</div><div class="c y">Applies them</div><div class="c o">Update archives</div><div class="j">Monitoring</div><div class="c y">Runs the health checks</div><div class="c o">Scripts and engineering support</div>
   </div>
   <p class="v31-foot rise d3">No access into your network for Silow, <b>unless you choose to open it.</b></p>
-</section>
-<section class="v31 v34">
-  <div class="eyebrow rise">Next step</div>
-  <h2 class="rise d1">One technical review. <em>Then the pilot.</em></h2>
-  <div class="v34-grid n2 rise d2"><div class="v34-g"><div class="h">We check together</div><div class="r"><b>Capture and masking</b><span>Tested on your screens</span></div><div class="r"><b>Hosting and model</b><span>Every payload traced</span></div><div class="r"><b>Retention and access</b><span>Set and verified</span></div><div class="r"><b>Owners</b><span>Named on both sides</span></div></div><div class="v34-g"><div class="h">You get</div><div class="r"><b>Document pack</b><span>Sent before the review</span></div><div class="r"><b>Architecture</b><span>Agreed and documented</span></div><div class="r"><b>Control checklist</b><span>For your security team</span></div><div class="r"><b>Acceptance record</b><span>Signed before the pilot</span></div></div></div>
 </section>
 <section class="v31 v31-m">
   <div class="eyebrow rise">How we start <b>·</b> the first month is free</div>
   <div class="lvl"><span class="on"><i>1</i>Onboarding</span><span class=""><i>2</i>Four weeks</span><span class=""><i>3</i>Debrief</span></div>
-  <h2 class="rise d1">One onboarding call. <em>Then the install.</em></h2>
-  <div class="v32-onb rise d2">
-    <div><b>The pilot group</b><span>20–50 people who run the processes you most want to see, plus one manager on your side who owns the pilot.</span></div>
-    <div><b>The call</b><span>We agree the team, the goal and any custom dashboards, and finalize what to deploy. If you want, a short session for your top managers on what this is for.</span></div>
-    <div><b>Install</b><span>Your IT deploys and pushes the recorder through your device management. Recording starts.</span></div>
-  </div>
+  <h2 class="rise d1">Call, review, install.</h2>
+  <p class="v31-sub rise d1">20–50 people who run the processes you most want to see. <b>One manager on your side owns the pilot.</b></p>
+  <div class="v38-steps rise d2"><div><i>1</i><b>Onboarding call</b><ul><li>We agree the team, the goal and any custom dashboards</li><li>You get the document pack for the review</li><li>Optional: a short session for your top managers</li></ul></div><div><i>2</i><b>Technical review</b><ul><li>Masking, hosting, retention and access, checked with our engineers</li><li>You get the hardware spec, architecture and control checklist</li><li>Acceptance signed before the pilot</li></ul></div><div><i>3</i><b>Install</b><ul><li>Your IT sets up the servers and installs our package, offline</li><li>Pushes the recorder through device management</li><li>Recording starts</li></ul></div></div>
 </section>
 <section class="v31 v31-m">
   <div class="eyebrow rise">How we start <b>·</b> weeks 1 to 4</div>
