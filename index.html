@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Silow — for insurance operations</title><!-- rev:ins-v39 -->
+<title>Silow — for insurance operations</title><!-- rev:ins-v40 -->
 <style>
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
@@ -623,6 +623,12 @@
   .v39-tbl .c.y::before{ content:"Your team · "; font-family:var(--mono); font-size:10.5px; text-transform:uppercase; color:var(--accent); }
   .v39-tbl .n{ grid-row:span 2; }
 }
+
+/* v40: weeks 1-4, no cards */
+.v40-two{ margin-top:5.5vh; display:grid; grid-template-columns:1fr 1fr; gap:64px; width:min(1080px,86vw); text-align:left; }
+.v40-two p{ margin:0; padding-top:18px; border-top:1.5px solid var(--accent); font-size:clamp(19px,1.55vw,26px); line-height:1.4; letter-spacing:-.01em; color:var(--ink-2); }
+.v40-two p span{ display:block; margin-bottom:12px; font-family:var(--mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
+@media (max-width:900px){ .v40-two{ grid-template-columns:1fr; gap:28px; width:100%; } }
 </style>
 </head>
 <body>
@@ -1238,14 +1244,13 @@
   <p class="v31-sub rise d1">20–50 people who run the processes you most want to see. <b>One manager on your side owns the pilot.</b></p>
   <div class="v38-steps rise d2"><div><i>1</i><b>Technical review</b><ul><li>We agree your requirements and ours with our engineers</li><li>Masking, hosting, retention and access</li><li>You get the document pack, hardware spec and control checklist</li></ul></div><div><i>2</i><b>Install and check</b><ul><li>Your IT sets up the servers and installs our package, offline</li><li>Pushes the recorder through device management</li><li>We check it together on your screens, acceptance signed</li></ul></div><div><i>3</i><b>Onboarding call</b><ul><li>We agree the team, the goal and any custom dashboards</li><li>Optional: a short session for your top managers</li><li>Recording starts</li></ul></div></div>
 </section>
-<section class="v31 v31-m">
+<section class="v31 v31-m v40-wk">
   <div class="eyebrow rise">How we start <b>·</b> weeks 1 to 4</div>
   <div class="lvl"><span class="done"><i>1</i>Onboarding</span><span class="on"><i>2</i>Four weeks</span><span class=""><i>3</i>Debrief</span></div>
-  <h2 class="rise d1">Every week, <em>a checkpoint.</em></h2>
-  <div class="v32-onb rise d2">
-    <div><b>From week 1</b><span>Reports, process maps and the automation plan go live, and update every week.</span></div>
-    <div><b>Every week</b><span>A short call with your manager, or with everyone involved: what the data shows, what to fix, what to look at next.</span></div>
-    <div><b>Two people own it</b><span>One person on our side responsible for your team, one manager on yours. Weekly calls catch problems in week one.</span></div>
+  <h2 class="rise d1">Your reports, any time. <em>A call every week.</em></h2>
+  <div class="v40-two rise d2">
+    <p><span>From week 1</span>Your team opens the reports for every past week on its own, whenever it wants.</p>
+    <p><span>On top of that</span>Every week we get on a call and go through them with you: what the data shows, what to fix, what to look at next.</p>
   </div>
 </section>
 <section class="v31 v31-m">
