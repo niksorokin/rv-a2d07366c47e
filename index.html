@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Silow — for insurance operations</title><!-- rev:ins-v38 -->
+<title>Silow — for insurance operations</title><!-- rev:ins-v39 -->
 <style>
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
@@ -601,6 +601,28 @@
 .v38-steps ul{ margin:14px 0 0; padding:0; list-style:none; }
 .v38-steps li{ padding:9px 0; border-top:1px solid var(--line); font-size:clamp(15px,1.15vw,19px); line-height:1.35; color:var(--mute); }
 @media (max-width:900px){ .v38-steps{ grid-template-columns:1fr; gap:12px; width:100%; } .v38-steps > div::after{ display:none; } }
+
+/* v39: Silow provides / your team */
+.v39-tbl{ margin-top:4.5vh; width:min(1120px,86vw); display:grid; grid-template-columns:48px 1.25fr 1fr; text-align:left; }
+.v39-tbl > div{ border-bottom:1px solid var(--line); }
+.v39-tbl .hd{ padding:0 22px 14px; font-family:var(--mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--mute); border-bottom:1px solid var(--line-2); }
+.v39-tbl .hd.o{ color:var(--ink); }
+.v39-tbl .hd.y{ color:var(--accent); }
+.v39-tbl .n:first-child{ border-bottom:1px solid var(--line-2); }
+.v39-tbl .n{ display:flex; align-items:center; font-family:var(--mono); font-size:13px; color:var(--accent); }
+.v39-tbl .c{ padding:15px 22px; display:flex; flex-direction:column; justify-content:center; gap:3px; font-size:clamp(16px,1.25vw,21px); line-height:1.3; }
+.v39-tbl .c.o b{ font-weight:500; color:var(--ink); letter-spacing:-.01em; }
+.v39-tbl .c.o span{ font-size:clamp(13.5px,1vw,16px); color:var(--mute); }
+.v39-tbl .c.y{ background:rgba(59,91,255,.05); color:var(--ink-2); }
+@media (max-width:900px){
+  .v39-tbl{ grid-template-columns:32px 1fr; width:100%; }
+  .v39-tbl .hd.y, .v39-tbl .n:first-child{ display:none; }
+  .v39-tbl .hd.o{ grid-column:1 / -1; padding-left:0; }
+  .v39-tbl .c.y{ grid-column:2; border-bottom-width:2px; }
+  .v39-tbl .c.o{ border-bottom:0; }
+  .v39-tbl .c.y::before{ content:"Your team · "; font-family:var(--mono); font-size:10.5px; text-transform:uppercase; color:var(--accent); }
+  .v39-tbl .n{ grid-row:span 2; }
+}
 </style>
 </head>
 <body>
@@ -1200,12 +1222,12 @@
   <div class="v37-grid rise d2"><div class="lb" style="grid-row:1"></div><div class="st" style="grid-row:1;grid-column:2 / 3"><i>1</i>Record</div><div class="ar" style="grid-row:1;grid-column:3">→</div><div class="st" style="grid-row:1;grid-column:4 / 5"><i>2</i>Store</div><div class="ar" style="grid-row:1;grid-column:5">→</div><div class="st" style="grid-row:1;grid-column:6 / 7"><i>3</i>Mask</div><div class="ar" style="grid-row:1;grid-column:7">→</div><div class="st" style="grid-row:1;grid-column:8 / 9"><i>4</i>Analyze</div><div class="ar" style="grid-row:1;grid-column:9">→</div><div class="st" style="grid-row:1;grid-column:10 / 11"><i>5</i>Report</div><div class="lb o" style="grid-row:2">Silow servers</div><div class="lb y" style="grid-row:3">Your servers<em>Proposed for you</em></div><div class="c both" style="grid-row:2 / 4;grid-column:2 / 3">Your laptops</div><div class="c o" style="grid-row:2;grid-column:4 / 9">OVHcloud US</div><div class="c o" style="grid-row:2;grid-column:10 / 11">Silow web app</div><div class="c y" style="grid-row:3;grid-column:4 / 5">Your storage</div><div class="c y" style="grid-row:3;grid-column:6 / 9">Your GPUs or your cloud</div><div class="c y" style="grid-row:3;grid-column:10 / 11">Your network</div></div>
   <p class="v31-foot rise d3">Same steps and same reports. <b>Only where they run changes.</b></p>
 </section>
-<section class="v31 v35-who">
+<section class="v31 v39-who">
   <div class="eyebrow rise">Deployment <b>·</b> on your servers</div>
   <h2 class="rise d1">Who does what.</h2>
-  <div class="v35-tbl rise d2">
-    <div class="j"></div><div class="hd y">Your IT</div><div class="hd o">Silow</div>
-    <div class="j">Recorder</div><div class="c y">Pushes it to laptops</div><div class="c o">Silent installers</div><div class="j">Updates</div><div class="c y">Applies them</div><div class="c o">Update archives</div><div class="j">Monitoring</div><div class="c y">Runs the health checks</div><div class="c o">Scripts and engineering support</div>
+  <div class="v39-tbl rise d2">
+    <div class="n"></div><div class="hd o">Silow provides</div><div class="hd y">Your team needs to</div>
+    <div class="n">1</div><div class="c o"><b>Server and GPU spec</b><span>Sized for your pilot scope</span></div><div class="c y">Sets up the servers and GPUs</div><div class="n">2</div><div class="c o"><b>Installer</b><span>Offline package with instructions</span></div><div class="c y">Installs it in your network</div><div class="n">3</div><div class="c o"><b>Recorder app</b><span>Silent installers for Windows, macOS, Linux</span></div><div class="c y">Pushes it to laptops through device management</div><div class="n">4</div><div class="c o"><b>Updates</b><span>Update packages, offline</span></div><div class="c y">Applies them</div><div class="n">5</div><div class="c o"><b>Scripts and engineering support</b><span>Health checks and help when needed</span></div><div class="c y">Runs the checks, raises issues</div>
   </div>
   <p class="v31-foot rise d3">No access into your network for Silow, <b>unless you choose to open it.</b></p>
 </section>
