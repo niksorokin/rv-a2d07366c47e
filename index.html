@@ -441,6 +441,38 @@
   .v31-rows{ width:100%; } .v31-rows > div{ grid-template-columns:1fr; gap:4px; }
   .v31 .lvl{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px 0; }
 }
+
+.v31-sub{ margin-top:14px; font-size:clamp(17px,1.35vw,23px); color:var(--mute); max-width:980px; letter-spacing:-.01em; }
+.v31-arch{ margin-top:4.5vh; width:min(1340px,94vw); display:grid; grid-template-columns:1fr 230px; gap:18px; align-items:stretch; text-align:left; }
+.aw-pm{ border:1.5px dashed rgba(59,91,255,.55); border-radius:20px; padding:18px 18px 16px; background:rgba(59,91,255,.035); }
+.aw-k, .v31-two .k, .v31-opts .k{ font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
+.aw-row{ margin-top:14px; display:flex; align-items:stretch; gap:8px; }
+.aw-n{ flex:1 1 0; background:#fff; border-radius:14px; box-shadow:inset 0 0 0 1px var(--line-2); padding:14px 14px 16px; display:flex; flex-direction:column; gap:6px; }
+.aw-n.aw-hi{ box-shadow:inset 0 0 0 1.5px var(--accent); }
+.aw-n b{ font-size:clamp(15px,1.15vw,19px); font-weight:500; color:var(--ink); }
+.aw-n span{ font-size:clamp(13px,.95vw,15px); line-height:1.35; color:var(--mute); }
+.aw-row > i{ align-self:center; font-style:normal; color:var(--faint); }
+.aw-f{ margin-top:14px; font-size:clamp(13px,.95vw,15px); color:var(--ink-2); }
+.aw-out{ border-radius:16px; background:var(--paper-2); padding:18px; display:flex; flex-direction:column; justify-content:center; gap:8px; }
+.aw-out b{ font-size:18px; font-weight:500; color:var(--ink); }
+.aw-out span{ font-size:14.5px; line-height:1.4; color:var(--mute); }
+.v31-opts{ margin-top:4vh; width:min(1240px,90vw); display:grid; grid-template-columns:repeat(3,1fr); gap:14px; text-align:left; }
+.v31-opts > div{ padding:22px; border-radius:16px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); display:flex; flex-direction:column; gap:10px; }
+.v31-opts > div.on{ box-shadow:inset 0 0 0 1.5px var(--accent); }
+.v31-opts > div:not(.on) .k{ color:var(--faint); }
+.v31-opts .t{ font-size:clamp(20px,1.6vw,27px); font-weight:500; letter-spacing:-.02em; color:var(--ink); }
+.v31-opts .r{ font-size:clamp(16px,1.2vw,20px); line-height:1.4; color:var(--ink-2); }
+.v31-opts .r b{ font-weight:500; color:var(--ink); }
+.v31-opts .d{ font-size:clamp(14px,1.05vw,17px); line-height:1.4; color:var(--mute); }
+.v31-two{ margin-top:4vh; width:min(1200px,90vw); display:grid; grid-template-columns:1fr 1fr; gap:14px; text-align:left; }
+.v31-two > div{ padding:22px 24px; border-radius:16px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); }
+.v31-two ul{ margin:12px 0 0; padding:0; list-style:none; }
+.v31-two li{ padding:10px 0; border-top:1px solid var(--line); font-size:clamp(15px,1.15vw,19px); line-height:1.4; color:var(--mute); }
+.v31-two li b{ font-weight:500; color:var(--ink); }
+@media (max-width:900px){
+  .v31-arch{ grid-template-columns:1fr; width:100%; } .aw-row{ flex-direction:column; } .aw-row > i{ transform:rotate(90deg); }
+  .v31-opts, .v31-two{ grid-template-columns:1fr; width:100%; }
+}
 </style>
 </head>
 <body>
@@ -1038,49 +1070,80 @@
 <section class="v31 v31-dep">
   <div class="lvl"><span class="on"><i>1</i>Our servers</span><span class=""><i>2</i>Your servers</span></div>
   <h2 class="rise d1">On our servers. <em>The fastest start.</em></h2>
-  <div class="v31-flow rise d2"><div><i>1</i><span>Recorder on each laptop</span></div><b>→</b><div><i>2</i><span>Silow storage in the US</span></div><b>→</b><div><i>3</i><span>Our model on our GPUs</span></div><b>→</b><div><i>4</i><span>Reports and chat</span></div></div>
-  <div class="v31-cards c3  rise d2"><div><div class="t">Where it runs</div><div class="d">Silow infrastructure on OVHcloud, in the US.</div></div><div><div class="t">Which AI</div><div class="d">Our own model. No outside AI providers.</div></div><div><div class="t">Who runs it</div><div class="d">We install, run and update everything.</div></div></div>
-  <p class="v31-foot rise d3">Same recorder, same reports, same quality on both options. <b>Only where it runs and who operates it change.</b></p>
+  <div class="v31-flow rise d2"><div><i>1</i><span>Recorder on each laptop</span></div><b>→</b><div><i>2</i><span>Silow storage, OVHcloud US</span></div><b>→</b><div><i>3</i><span>Our masking model</span></div><b>→</b><div><i>4</i><span>Our analysis model</span></div><b>→</b><div><i>5</i><span>Reports and chat</span></div></div>
+  <div class="v31-cards c3  rise d2"><div><div class="t">All in the US</div><div class="d">Storage, masking and analysis run on Silow infrastructure at OVHcloud US.</div></div><div><div class="t">No outside AI</div><div class="d">Both models are ours. Nothing goes to a third-party model provider.</div></div><div><div class="t">We operate it</div><div class="d">We install, run and update everything, as your data processor under contract.</div></div></div>
+  <p class="v31-foot rise d3">Same recorder and reports as on your servers. <b>What changes is where it runs and who operates it.</b></p>
 </section>
 <section class="v31 v31-dep">
   <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
-  <h2 class="rise d1">On your servers. <em>Nothing leaves your perimeter.</em></h2>
-  <div class="v31-flow rise d2"><div><i>1</i><span>Recorder on each laptop</span></div><b>→</b><div><i>2</i><span>Video goes straight to your storage</span></div><b>→</b><div><i>3</i><span>Your server processes it on a schedule</span></div><b>→</b><div><i>4</i><span>The model runs on your GPU server</span></div><b>→</b><div><i>5</i><span>Reports and chat inside your network</span></div></div>
-  <p class="v31-foot rise d3">No data reaches Silow. Already running this way at a US claims-support company: <b>their IT installed it, the data stays with them.</b></p>
-</section>
-<section class="v31 v31-dep">
-  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
-  <h2 class="rise d1">You install and run it. <em>We support you.</em></h2>
-  <div class="v31-cards c3  rise d2"><div><div class="t">One package</div><div class="d">Containers for intake, processing, reports, chat, database and storage. Installs offline from an archive.</div></div><div><div class="t">Your storage</div><div class="d">S3-compatible storage on your VM, or a bucket in your own cloud.</div></div><div><div class="t">Updates in place</div><div class="d">A new version installs on top and keeps your settings and data.</div></div><div><div class="t">Health checks included</div><div class="d">Scripts show data freshness, status per user and per report, and chat access.</div></div><div><div class="t">Support from Silow</div><div class="d">Update archives, instructions and help with any issue. Remote access only if you choose to give it.</div></div><div><div class="t">Sized to your scope</div><div class="d">Users, recorded hours and retention set the hardware. We recommend it once the pilot scope is agreed.</div></div></div>
-</section>
-<section class="v31 v31-dep">
-  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
-  <h2 class="rise d1">Rolling it out <em>to every laptop.</em></h2>
-  <div class="v31-cards c3  rise d2"><div><div class="t">Windows and macOS</div><div class="d">Windows x64 and Apple Silicon Macs.</div></div><div><div class="t">Silent install</div><div class="d">Your admins push it with the server address and employee ID, through the tools you already use.</div></div><div><div class="t">Silent updates</div><div class="d">Installed over the current version. Settings and recordings stay.</div></div><div><div class="t">Runs in the background</div><div class="d">Nothing for the employee to set up.</div></div><div><div class="t">Pause is your call</div><div class="d">An admin policy decides whether employees can pause recording.</div></div><div><div class="t">Your rules for notice</div><div class="d">You decide how employees are told. We write it into the agreement.</div></div></div>
-</section>
-<section class="v31 v31-dep">
-  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
-  <h2 class="rise d1">What is recorded, <em>and who can see it.</em></h2>
-  <div class="v31-rows rise d2">
-    <div><b>Recorded</b><span>The screen, at intervals. No keystrokes. Who and what gets recorded is agreed with you.</span></div>
-    <div><b>Masking</b><span>Sensitive fields can be masked even inside your perimeter, if your policy asks for it.</span></div>
-    <div><b>Retention</b><span>Set to your policy. Raw recordings can be deleted as soon as they are processed.</span></div>
-    <div><b>Access</b><span>Roles and audit agreed with you. The data opens only with an access token.</span></div>
-    <div><b>Model</b><span>Runs in your environment, next to your data.</span></div>
-    <div><b>People decide</b><span>People review every finding. No automated decisions about employees.</span></div>
+  <h2 class="rise d1">On your servers. <em>The whole pipeline in your network.</em></h2>
+  <div class="v31-arch rise d2">
+    <div class="aw-pm">
+      <div class="aw-k">Your perimeter</div>
+      <div class="aw-row">
+        <div class="aw-n"><b>Recorder</b><span>Windows and Mac laptops</span></div><i>→</i>
+        <div class="aw-n"><b>Your storage</b><span>S3-compatible on your VM, or your cloud bucket</span></div><i>→</i>
+        <div class="aw-n"><b>Masking model</b><span>Hides names, account and policy numbers</span></div><i>→</i>
+        <div class="aw-n"><b>Analysis model</b><span>Turns frames into steps, tasks, processes</span></div><i>→</i>
+        <div class="aw-n aw-hi"><b>Reports and chat</b><span>Inside your network, access by token</span></div>
+      </div>
+      <div class="aw-f">One package of containers on your app server · models on your GPU server · database and storage are yours</div>
+    </div>
+    <div class="aw-out"><b>Silow</b><span>Sends update archives and helps your team. No connection into your network unless you open one.</span></div>
   </div>
 </section>
 <section class="v31 v31-dep">
   <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
-  <h2 class="rise d1">For your security review, <em>before we meet.</em></h2>
-  <div class="v31-rows rise d2">
-    <div><b>Architecture and data flow</b><span>Components, where data is stored and processed, network connections.</span></div>
-    <div><b>Deployment requirements</b><span>App server, GPU server, storage and network. Sizing once the scope is agreed.</span></div>
-    <div><b>Recorder rollout</b><span>Silent install, supported systems, pause control, updates.</span></div>
-    <div><b>Data handling</b><span>What is recorded, masking, retention and access, set to your policy.</span></div>
-    <div><b>Support model</b><span>How we update and support it. Remote access only by agreement.</span></div>
+  <h2 class="rise d1">What leaves your network <em>is your choice.</em></h2>
+  <p class="v31-sub rise d1">Recordings and masking always stay with you. The one open choice is where the analysis model runs.</p>
+  <div class="v31-opts rise d2">
+    <div class="on"><div class="k">Recommended</div><div class="t">On your GPU servers</div><div class="r">Leaves your network: <b>nothing.</b></div><div class="d">We confirm the model fits your hardware and capacity in the technical review.</div></div>
+    <div><div class="k">Option</div><div class="t">In your cloud account</div><div class="r">Leaves: <b>masked or derived data</b>, into your own Azure, AWS or GCP account.</div><div class="d">Stays under your contracts and your region.</div></div>
+    <div><div class="k">For comparison</div><div class="t">Silow cloud</div><div class="r">Leaves: <b>recordings</b>, to Silow at OVHcloud US.</div><div class="d">The fastest start, but not what we propose for you.</div></div>
   </div>
-  <p class="v31-foot rise d3">Then: NDA <b>→</b> document pack <b>→</b> one joint technical session <b>→</b> pilot with 20–50 people.</p>
+  <p class="v31-foot rise d3">The masking model has to see the raw screen to mask it. <b>That is why it always runs where the recordings are.</b></p>
+</section>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
+  <h2 class="rise d1">What you provide. <em>What we ship.</em></h2>
+  <div class="v31-two rise d2">
+    <div><div class="k">Your IT provides</div><ul>
+      <li><b>An app server</b> for one Docker Compose package</li>
+      <li><b>A GPU server</b> for the masking and analysis models</li>
+      <li><b>Storage:</b> S3-compatible, or a bucket in your cloud</li>
+      <li><b>A network route</b> from laptops to the intake service</li>
+      <li><b>Your device management</b> to push the recorder</li></ul></div>
+    <div><div class="k">Silow ships</div><ul>
+      <li><b>An image archive</b> that installs offline</li>
+      <li><b>Upgrades in place</b> that keep your config and data</li>
+      <li><b>Health-check scripts:</b> data freshness per stage, status per user and per report, chat access</li>
+      <li><b>Recorder installers:</b> silent EXE for Windows x64, DMG for Apple Silicon Macs</li>
+      <li><b>Engineering support</b> from our team</li></ul></div>
+  </div>
+  <p class="v31-foot rise d3">Hardware is sized from three numbers: <b>users, recorded hours a day, and how long you keep data.</b> We send the spec once the pilot scope is set.</p>
+</section>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
+  <h2 class="rise d1">On the laptop, <em>and after it.</em></h2>
+  <div class="v31-two rise d2">
+    <div><div class="k">On each laptop</div><ul>
+      <li><b>Silent install</b> through Intune, SCCM or Jamf, with the server address and employee ID</li>
+      <li><b>Silent updates</b> over the current version, settings and recordings kept</li>
+      <li><b>Screen frames at intervals.</b> No keystrokes.</li>
+      <li><b>No pause button</b> if your admin policy turns it off</li></ul></div>
+    <div><div class="k">In your environment</div><ul>
+      <li><b>Masking</b> when your policy wants it, even inside the perimeter. It lowers exposure; it is not perfect anonymization, so we test it on your data</li>
+      <li><b>Raw recordings</b> can be deleted as soon as they are processed</li>
+      <li><b>Reports and chat</b> open only with an access token</li>
+      <li><b>People decide.</b> No automated decisions about employees</li></ul></div>
+  </div>
+</section>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
+  <h2 class="rise d1">One technical review. <em>Then the pilot.</em></h2>
+  <p class="v31-sub rise d1">Your infrastructure and security owners with our engineers, on your setup, before anyone is recorded.</p>
+  <div class="v31-cards c4  rise d2"><div><div class="t">Capture and masking</div><div class="d">Set what is recorded. Test masking on your own sample screens.</div></div><div><div class="t">Hosting and model</div><div class="d">Trace every payload. Confirm where each model runs and that nothing else leaves.</div></div><div><div class="t">Retention and access</div><div class="d">Set deletion of raw recordings, who sees which report, and any support access.</div></div><div><div class="t">Owners and evidence</div><div class="d">Who runs what, how incidents are handled, what counts as accepted.</div></div></div>
+  <p class="v31-foot rise d3">Output: <b>one agreed architecture, a control checklist and an acceptance record.</b> Before it, we send the architecture, requirements, rollout, data-handling and support documents.</p>
 </section>
 <section class="v31 v31-m">
   <div class="eyebrow rise">How we start <b>·</b> the first month is free</div>
