@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Silow — for insurance operations</title><!-- rev:ins-v40 -->
+<title>Silow — for insurance operations</title><!-- rev:ins-v41 -->
 <style>
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
@@ -629,6 +629,13 @@
 .v40-two p{ margin:0; padding-top:18px; border-top:1.5px solid var(--accent); font-size:clamp(19px,1.55vw,26px); line-height:1.4; letter-spacing:-.01em; color:var(--ink-2); }
 .v40-two p span{ display:block; margin-bottom:12px; font-family:var(--mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
 @media (max-width:900px){ .v40-two{ grid-template-columns:1fr; gap:28px; width:100%; } }
+
+/* v41: workshop + example directions */
+.v41-lbl{ margin-top:5vh; font-family:var(--mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--mute); }
+.v41-four{ margin-top:18px; display:grid; grid-template-columns:repeat(4,1fr); gap:40px; width:min(1240px,90vw); text-align:left; }
+.v41-four p{ margin:0; padding-top:16px; border-top:1.5px solid var(--accent); font-size:clamp(16px,1.25vw,21px); line-height:1.4; color:var(--ink-2); }
+.v41-four p span{ display:block; margin-bottom:8px; font-size:clamp(19px,1.5vw,25px); font-weight:500; letter-spacing:-.02em; color:var(--ink); }
+@media (max-width:900px){ .v41-four{ grid-template-columns:1fr; gap:22px; width:100%; } }
 </style>
 </head>
 <body>
@@ -1253,11 +1260,13 @@
     <p><span>On top of that</span>Every week we get on a call and go through them with you: what the data shows, what to fix, what to look at next.</p>
   </div>
 </section>
-<section class="v31 v31-m">
+<section class="v31 v31-m v41-ws">
   <div class="eyebrow rise">How we start <b>·</b> end of the month</div>
   <div class="lvl"><span class="done"><i>1</i>Onboarding</span><span class="done"><i>2</i>Four weeks</span><span class="on"><i>3</i>Debrief</span></div>
-  <h2 class="rise d1">One joint session. <em>What you get.</em></h2>
-  <div class="v32-onb four rise d2"><div><b>Automation plan</b><span>Step by step: what to automate first and the hours it frees.</span></div><div><b>Process documentation</b><span>Every step of the processes in scope, ready to export.</span></div><div><b>People compared</b><span>How different people run the same work, and who does it fastest.</span></div><div><b>A new view of your processes</b><span>Where work waits, repeats or runs outside your systems.</span></div></div>
+  <h2 class="rise d1">One workshop. <em>Then you act on it.</em></h2>
+  <p class="v31-sub rise d1">At the end of the month we run a joint workshop with your team and work through the data together.</p>
+  <div class="v41-lbl rise d2">Examples of what you can take out of it</div>
+  <div class="v41-four rise d2"><p><span>Automate</span>What to automate first, step by step, and the hours it frees.</p><p><span>Document</span>Every step of the processes in scope, ready for training and SOPs.</p><p><span>Spread what works</span>How your fastest people do the work, so the rest can follow.</p><p><span>Fix the friction</span>Where work waits, repeats or runs outside your systems.</p></div>
 </section>
 <section class="s-depth s-prod v31-demo">
   <h2>Home and chat: <em>start from the answer.</em></h2>
