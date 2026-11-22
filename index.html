@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Silow — for insurance operations</title><!-- rev:ins-v42 -->
+<title>Silow — for insurance operations</title><!-- rev:ins-v43 -->
 <style>
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
@@ -663,6 +663,40 @@
   .v42-grid .ck{ justify-self:start; }
   .v42-grid .ck::after{ content:" · every week"; }
 }
+
+/* v43 */
+.v43-opt{ display:inline-block; margin-left:10px; padding:2px 7px; border-radius:5px; background:#fff; color:var(--accent); font-style:normal; font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; font-weight:400; vertical-align:middle; }
+.v43-tbl{ margin-top:4.5vh; width:min(1040px,84vw); display:grid; grid-template-columns:1.2fr 1fr; text-align:left; }
+.v43-tbl > div{ border-bottom:1px solid var(--line); }
+.v43-tbl .hd{ padding:0 18px 12px; font-family:var(--mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; border-bottom:1px solid var(--line-2); }
+.v43-tbl .hd.o{ color:var(--ink); padding-left:0; } .v43-tbl .hd.y{ color:var(--accent); }
+.v43-tbl .c{ padding:13px 18px; display:flex; flex-direction:column; justify-content:center; gap:3px; font-size:clamp(15px,1.15vw,19px); line-height:1.3; }
+.v43-tbl .c.o{ padding-left:0; }
+.v43-tbl .c.o b{ font-weight:500; color:var(--ink); letter-spacing:-.01em; }
+.v43-tbl .c.o span{ font-size:clamp(13px,.95vw,15.5px); color:var(--mute); }
+.v43-tbl .c.y{ background:rgba(59,91,255,.05); color:var(--ink-2); }
+.v43-tl .v31-sub b{ color:var(--ink); font-weight:500; }
+.v43-grid{ margin-top:5vh; width:min(1240px,90vw); display:grid; grid-template-columns:1fr 1fr repeat(4,1fr) 1fr; row-gap:10px; column-gap:8px; text-align:left; }
+.v43-grid .hd{ padding:0 4px 10px; font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--mute); border-bottom:1.5px solid var(--line-2); text-align:center; }
+.v43-grid .hd.wk{ color:var(--accent); border-bottom-color:var(--accent); }
+.v43-grid .gl{ border-left:1px dashed var(--line-2); margin-left:-4px; pointer-events:none; }
+.v43-grid .b{ position:relative; z-index:1; border-radius:12px; padding:14px 16px; font-size:clamp(15px,1.15vw,19px); font-weight:500; display:flex; align-items:center; }
+.v43-grid .b b{ font-weight:500; color:var(--ink); }
+.v43-grid .setup, .v43-grid .onb{ background:#fff; box-shadow:inset 0 0 0 1.5px var(--accent); justify-content:center; }
+.v43-grid .rec{ background:var(--paper-2); color:var(--ink-2); }
+.v43-grid .out{ background:var(--accent); color:#fff; }
+.v43-grid .db{ position:relative; z-index:1; border-radius:14px; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-size:clamp(17px,1.3vw,22px); }
+.v43-grid .db b{ font-weight:500; }
+@media (max-width:900px){
+  .v43-tbl{ grid-template-columns:1fr; width:100%; } .v43-tbl .hd.y{ display:none; }
+  .v43-tbl .c.o{ border-bottom:0; } .v43-tbl .c.y{ padding-left:12px; }
+  .v43-tbl .c.y::before{ content:"Your team · "; font-family:var(--mono); font-size:10.5px; text-transform:uppercase; color:var(--accent); }
+  .v43-grid{ grid-template-columns:1fr; width:100%; row-gap:8px; }
+  .v43-grid > *{ grid-column:auto !important; grid-row:auto !important; }
+  .v43-grid .hd, .v43-grid .gl{ display:none; }
+  .v43-grid .db{ padding:14px 16px; justify-content:flex-start; }
+  .v43-grid .rec::after{ content:" · weeks 1–4"; } .v43-grid .out::after{ content:" · weeks 2–4"; margin-left:4px; }
+}
 </style>
 </head>
 <body>
@@ -1254,51 +1288,47 @@
       </div>
     </div>
   </div>
-  <p class="quiet rise d3">Leadership sees company and team reports, managers their own teams. <b>Names are anonymous by default.</b> <span class="m30-mask"><b>Masking is optional</b> on your servers.</span></p>
+  <p class="quiet rise d3">Leadership sees company and team reports, managers their own teams. <b>Employee anonymity and PII masking are optional on your servers.</b></p>
   </section>
 <section class="v31 v37-pipe">
   <div class="eyebrow rise">Deployment</div>
   <h2 class="rise d1">Our servers <em>or yours.</em></h2>
-  <div class="v37-grid rise d2"><div class="lb" style="grid-row:1"></div><div class="st" style="grid-row:1;grid-column:2 / 3"><i>1</i>Record</div><div class="ar" style="grid-row:1;grid-column:3">→</div><div class="st" style="grid-row:1;grid-column:4 / 5"><i>2</i>Store</div><div class="ar" style="grid-row:1;grid-column:5">→</div><div class="st" style="grid-row:1;grid-column:6 / 7"><i>3</i>Mask</div><div class="ar" style="grid-row:1;grid-column:7">→</div><div class="st" style="grid-row:1;grid-column:8 / 9"><i>4</i>Analyze</div><div class="ar" style="grid-row:1;grid-column:9">→</div><div class="st" style="grid-row:1;grid-column:10 / 11"><i>5</i>Report</div><div class="lb o" style="grid-row:2">Silow servers</div><div class="lb y" style="grid-row:3">Your servers<em>Proposed for you</em></div><div class="c both" style="grid-row:2 / 4;grid-column:2 / 3">Your laptops</div><div class="c o" style="grid-row:2;grid-column:4 / 9">OVHcloud US</div><div class="c o" style="grid-row:2;grid-column:10 / 11">Silow web app</div><div class="c y" style="grid-row:3;grid-column:4 / 5">Your storage</div><div class="c y" style="grid-row:3;grid-column:6 / 9">Your GPUs or your cloud</div><div class="c y" style="grid-row:3;grid-column:10 / 11">Your network</div></div>
+  <div class="v37-grid rise d2"><div class="lb" style="grid-row:1"></div><div class="st" style="grid-row:1;grid-column:2 / 3"><i>1</i>Record</div><div class="ar" style="grid-row:1;grid-column:3">→</div><div class="st" style="grid-row:1;grid-column:4 / 5"><i>2</i>Store</div><div class="ar" style="grid-row:1;grid-column:5">→</div><div class="st" style="grid-row:1;grid-column:6 / 7"><i>3</i>Mask</div><div class="ar" style="grid-row:1;grid-column:7">→</div><div class="st" style="grid-row:1;grid-column:8 / 9"><i>4</i>Analyze</div><div class="ar" style="grid-row:1;grid-column:9">→</div><div class="st" style="grid-row:1;grid-column:10 / 11"><i>5</i>Report</div><div class="lb o" style="grid-row:2">Silow servers</div><div class="lb y" style="grid-row:3">Your servers<em>Proposed for you</em></div><div class="c both" style="grid-row:2 / 4;grid-column:2 / 3">Your laptops</div><div class="c o" style="grid-row:2;grid-column:4 / 9">OVHcloud US</div><div class="c o" style="grid-row:2;grid-column:10 / 11">Silow web app</div><div class="c y" style="grid-row:3;grid-column:4 / 5">Your servers</div><div class="c y" style="grid-row:3;grid-column:6 / 9">Your GPUs or your cloud<em class="v43-opt">Masking optional</em></div><div class="c y" style="grid-row:3;grid-column:10 / 11">Your network</div></div>
   <p class="v31-foot rise d3">Same steps and same reports. <b>Only where they run changes.</b></p>
 </section>
-<section class="v31 v39-who">
+<section class="v31 v43-who">
   <div class="eyebrow rise">Deployment <b>·</b> on your servers</div>
-  <h2 class="rise d1">Who does what.</h2>
-  <div class="v39-tbl rise d2">
-    <div class="n"></div><div class="hd o">Silow provides</div><div class="hd y">Your team needs to</div>
-    <div class="n">1</div><div class="c o"><b>Server and GPU spec</b><span>Sized for your pilot scope</span></div><div class="c y">Sets up the servers and GPUs</div><div class="n">2</div><div class="c o"><b>Installer</b><span>Offline package with instructions</span></div><div class="c y">Installs it in your network</div><div class="n">3</div><div class="c o"><b>Recorder app</b><span>Silent installers for Windows, macOS, Linux</span></div><div class="c y">Pushes it to laptops through device management</div><div class="n">4</div><div class="c o"><b>Updates</b><span>Update packages, offline</span></div><div class="c y">Applies them</div><div class="n">5</div><div class="c o"><b>Scripts and engineering support</b><span>Health checks and help when needed</span></div><div class="c y">Runs the checks, raises issues</div>
+  <h2 class="rise d1">We provide everything. <em>You run it.</em></h2>
+  <div class="v43-tbl rise d2">
+    <div class="hd o">Silow provides</div><div class="hd y">Your team</div>
+    <div class="c o"><b>Infrastructure requirements</b><span>Compute, GPU and storage sizing for the agreed pilot scope</span></div><div class="c y">Provisions the application host, GPU inference node and storage</div><div class="c o"><b>Server package</b><span>Container images (Docker Compose), offline install with configuration guide</span></div><div class="c y">Deploys it in your environment, configures DNS, TLS and network access</div><div class="c o"><b>Recorder agent</b><span>Silent installers for Windows and macOS</span></div><div class="c y">Distributes it to endpoints via your MDM (Intune, SCCM, Jamf)</div><div class="c o"><b>Versioned updates</b><span>Offline upgrade bundles, in-place, config and data preserved</span></div><div class="c y">Applies them through your change management process</div><div class="c o"><b>Built-in observability and engineering support</b><span>Health endpoints, pipeline status monitoring, escalation to Silow engineering</span></div><div class="c y">Connects it to your monitoring, escalates incidents</div>
   </div>
-  <p class="v31-foot rise d3">No access into your network for Silow, <b>unless you choose to open it.</b></p>
 </section>
-<section class="v31 v42-tl">
+<section class="v31 v43-tl">
   <div class="eyebrow rise">How we start <b>·</b> the first month is free</div>
   <h2 class="rise d1">The first month, <em>week by week.</em></h2>
-  <div class="v42-grid rise d2"><div class="hd pre" style="grid-column:2 / 4;grid-row:1">Before week 1</div><div class="hd wk" style="grid-column:4;grid-row:1">Week 1</div><div class="hd wk" style="grid-column:5;grid-row:1">Week 2</div><div class="hd wk" style="grid-column:6;grid-row:1">Week 3</div><div class="hd wk" style="grid-column:7;grid-row:1">Week 4</div><div class="hd post" style="grid-column:8;grid-row:1">After week 4</div><div class="gl" style="grid-column:4;grid-row:1 / 6"></div><div class="gl" style="grid-column:5;grid-row:1 / 6"></div><div class="gl" style="grid-column:6;grid-row:1 / 6"></div><div class="gl" style="grid-column:7;grid-row:1 / 6"></div><div class="lb" style="grid-column:1;grid-row:2">Start</div><div class="b setup" style="grid-column:2;grid-row:2"><b>Setup</b><span>Requirements, then install</span></div><div class="b onb" style="grid-column:3;grid-row:2"><b>Onboarding call</b><span>Your team learns what and why</span></div><div class="lb" style="grid-column:1;grid-row:3">Recording</div><div class="b rec" style="grid-column:4 / 8;grid-row:3">Runs in the background, all four weeks</div><div class="lb" style="grid-column:1;grid-row:4">Reports</div><div class="b out" style="grid-column:4 / 8;grid-row:4">Every past week, open any time<small>updated weekly</small></div><div class="lb" style="grid-column:1;grid-row:5">Weekly call</div><div class="ck first" style="grid-column:4;grid-row:5"><i></i>Your manager + Silow</div><div class="ck" style="grid-column:5;grid-row:5"><i></i>Your manager + Silow</div><div class="ck" style="grid-column:6;grid-row:5"><i></i>Your manager + Silow</div><div class="ck" style="grid-column:7;grid-row:5"><i></i>Your manager + Silow</div><div class="db" style="grid-column:8;grid-row:2 / 6"><b>Debrief</b><span>Joint workshop with your team</span></div></div>
+  <p class="v31-sub rise d1"><b>Free for 20–50 people.</b> One team or several.</p>
+  <div class="v43-grid rise d2"><div class="hd pre" style="grid-column:1 / 3;grid-row:1">Before week 1</div><div class="hd wk" style="grid-column:3;grid-row:1">Week 1</div><div class="hd wk" style="grid-column:4;grid-row:1">Week 2</div><div class="hd wk" style="grid-column:5;grid-row:1">Week 3</div><div class="hd wk" style="grid-column:6;grid-row:1">Week 4</div><div class="hd post" style="grid-column:7;grid-row:1">After week 4</div><div class="gl" style="grid-column:3;grid-row:1 / 5"></div><div class="gl" style="grid-column:4;grid-row:1 / 5"></div><div class="gl" style="grid-column:5;grid-row:1 / 5"></div><div class="gl" style="grid-column:6;grid-row:1 / 5"></div><div class="b setup" style="grid-column:1;grid-row:2"><b>Setup</b></div><div class="b onb" style="grid-column:2;grid-row:2"><b>Onboarding</b></div><div class="b rec" style="grid-column:3 / 7;grid-row:3">Recording runs in the background</div><div class="b out" style="grid-column:4 / 7;grid-row:4">Reports &amp; weekly calls</div><div class="db" style="grid-column:7;grid-row:2 / 5"><b>Debrief</b></div></div>
 </section>
 <section class="v31 v31-m">
-  <div class="eyebrow rise">How we start <b>·</b> the first month is free</div>
   <div class="lvl"><span class="on"><i>1</i>Onboarding</span><span class=""><i>2</i>Four weeks</span><span class=""><i>3</i>Debrief</span></div>
   <h2 class="rise d1">Prepare, install, onboard.</h2>
-  <p class="v31-sub rise d1">20–50 people who run the processes you most want to see. <b>One manager on your side owns the pilot.</b></p>
-  <div class="v38-steps rise d2"><div><i>1</i><b>Preparation</b><ul><li>We agree who we record, the goal and the settings</li><li>Custom dashboards, if you need them</li><li>You get everything for the install: specs, package, instructions</li></ul></div><div><i>2</i><b>Install and check</b><ul><li>Your IT sets up the servers and installs our package, offline</li><li>Pushes the recorder through device management</li><li>We check it together on your screens</li></ul></div><div><i>3</i><b>Onboarding call</b><ul><li>We explain to your team what this is and why</li><li>Optional: a session for your top managers</li><li>Recording starts</li></ul></div></div>
+  <div class="v38-steps rise d2"><div><i>1</i><b>Preparation</b><ul><li>You decide who will be recorded</li><li>We provide everything for the install: specs, package, instructions</li></ul></div><div><i>2</i><b>Install</b><ul><li>Your IT sets up the servers and installs our package, offline</li><li>Your IT pushes the recorder through device management</li></ul></div><div><i>3</i><b>Onboarding call</b><ul><li>We check it together on your screens</li><li>We facilitate the onboarding for the managers on your team</li><li>Recording starts</li></ul></div></div>
 </section>
 <section class="v31 v31-m v40-wk">
-  <div class="eyebrow rise">How we start <b>·</b> weeks 1 to 4</div>
   <div class="lvl"><span class="done"><i>1</i>Onboarding</span><span class="on"><i>2</i>Four weeks</span><span class=""><i>3</i>Debrief</span></div>
   <h2 class="rise d1">Your reports, any time. <em>A call every week.</em></h2>
   <div class="v40-two rise d2">
-    <p><span>From week 1</span>You have access to the reports for every past week, any time.</p>
-    <p><span>On top of that</span>Every week we get on a call and go through them with you: what the data shows, what to fix, what to look at next.</p>
+    <p><span>After the first week</span>Your managers have full access to the reports and insights for the previous week and the entire period.</p>
+    <p><span>Every week</span>A dedicated Silow manager and your assigned manager meet to go through the interim findings. We help you see what to pay attention to, and adjust if needed.</p>
   </div>
 </section>
 <section class="v31 v31-m v41-ws">
-  <div class="eyebrow rise">How we start <b>·</b> end of the month</div>
-  <div class="lvl"><span class="done"><i>1</i>Onboarding</span><span class="done"><i>2</i>Four weeks</span><span class="on"><i>3</i>Debrief</span></div>
+    <div class="lvl"><span class="done"><i>1</i>Onboarding</span><span class="done"><i>2</i>Four weeks</span><span class="on"><i>3</i>Debrief</span></div>
   <h2 class="rise d1">One workshop. <em>Then you act on it.</em></h2>
   <p class="v31-sub rise d1">At the end of the month we run a joint workshop with your team and work through the data together.</p>
-  <div class="v41-lbl rise d2">Examples of what you can take out of it</div>
-  <div class="v41-four rise d2"><p><span>Automate</span>What to automate first, step by step, and the hours it frees.</p><p><span>Document</span>Every step of the processes in scope, ready for training and SOPs.</p><p><span>Spread what works</span>How your fastest people do the work, so the rest can follow.</p><p><span>Fix the friction</span>Where work waits, repeats or runs outside your systems.</p></div>
+  <div class="v41-lbl rise d2">Examples of what you can take out of one month of data</div>
+  <div class="v41-four rise d2"><p><span>Automate</span>What to automate first, step by step, and the hours it frees. Worked out together with your implementation partner, who gets everything needed to build it.</p><p><span>Document</span>Every step of the processes in scope, ready for training and SOPs.</p><p><span>Spread what works</span>How your fastest people do the work, so the rest can follow.</p><p><span>Fix the friction</span>Where work waits, repeats or runs outside your systems.</p></div>
 </section>
 <section class="s-depth s-prod v31-demo">
   <h2>Home and chat: <em>start from the answer.</em></h2>
