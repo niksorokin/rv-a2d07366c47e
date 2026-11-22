@@ -474,23 +474,55 @@
   .v31-opts, .v31-two{ grid-template-columns:1fr; width:100%; }
 }
 
-/* v32: comparison table, grouped rows */
-.v32-tbl{ margin-top:4.5vh; width:min(1180px,90vw); text-align:left; }
-.v32-tbl .r{ display:grid; grid-template-columns:minmax(190px,26%) 1fr 1fr; border-top:1px solid var(--line-2); }
-.v32-tbl .r.last{ border-bottom:1px solid var(--line-2); }
-.v32-tbl .r > *{ padding:12px 16px; }
-.v32-tbl .r b{ font-size:clamp(15px,1.1vw,19px); font-weight:500; color:var(--ink); letter-spacing:-.01em; }
-.v32-tbl .c{ font-size:clamp(15px,1.1vw,19px); line-height:1.35; color:var(--ink-2); }
-.v32-tbl .c.o{ background:rgba(14,14,12,.02); }
-.v32-tbl .c.y{ background:rgba(59,91,255,.05); font-weight:500; color:var(--ink); }
-.v32-tbl .r.h .c{ font-family:var(--mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:400; }
-.v32-tbl .r.h .c.o{ color:var(--mute); }
-.v32-onb{ margin-top:5vh; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; width:min(1200px,88vw); text-align:left; }
-.v32-onb.four{ grid-template-columns:repeat(4,1fr); width:min(1320px,92vw); }
-.v32-onb > div{ padding:26px 26px 28px; border-radius:16px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); display:flex; flex-direction:column; gap:12px; }
-.v32-onb b{ font-size:clamp(20px,1.6vw,27px); font-weight:500; letter-spacing:-.02em; color:var(--ink); line-height:1.15; }
-.v32-onb span{ font-size:clamp(15px,1.15vw,19px); line-height:1.45; color:var(--mute); }
-@media (max-width:900px){ .v32-tbl{ width:100%; } .v32-tbl .r{ grid-template-columns:1fr; } .v32-tbl .r > b{ padding-bottom:2px; } .v32-tbl .r.h{ display:none; } .v32-tbl .r .c.o::before{ content:"Silow servers · "; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); } .v32-tbl .r .c.y::before{ content:"Your servers · "; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); } .v32-onb, .v32-onb.four{ grid-template-columns:1fr; width:100%; } }
+/* v32: comparison, merged flow, simplified month */
+.v32-two{ margin-top:4.5vh; width:min(1200px,90vw); display:grid; grid-template-columns:1fr 1fr; gap:14px; text-align:left; }
+.v32-two > div{ padding:26px 28px 28px; border-radius:18px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); display:flex; flex-direction:column; gap:12px; }
+.v32-two > div.on{ box-shadow:inset 0 0 0 1.5px var(--accent); }
+.v32-two .k{ font-family:var(--mono); font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); display:flex; gap:12px; align-items:center; }
+.v32-two .k span{ color:var(--faint); letter-spacing:.1em; }
+.v32-two .t{ font-size:clamp(26px,2.3vw,40px); font-weight:500; letter-spacing:-.025em; line-height:1.08; color:var(--ink); }
+.v32-two .b, .v32-leave{ font-size:clamp(16px,1.2vw,20px); line-height:1.45; color:var(--mute); }
+.v32-leave{ color:var(--ink-2); }
+.v32-two b{ font-weight:500; color:var(--ink); }
+.v32-two ul{ margin:2px 0 0; padding:0; list-style:none; }
+.v32-two li{ display:grid; grid-template-columns:minmax(170px,36%) 1fr; gap:16px; padding:12px 0; border-top:1px solid var(--line); font-size:clamp(15px,1.12vw,19px); line-height:1.4; color:var(--mute); }
+.v32-two li > b{ color:var(--ink); }
+.v32-fl{ margin-top:4.5vh; width:min(1340px,94vw); display:grid; grid-template-columns:minmax(190px,1.25fr) repeat(5,1fr); text-align:left; border-top:1px solid var(--line-2); }
+.v32-fl > div{ padding:16px 14px; border-bottom:1px solid var(--line-2); }
+.v32-fl-h{ display:flex; gap:10px; align-items:center; font-size:clamp(15px,1.15vw,19px); font-weight:500; color:var(--ink); }
+.v32-fl-h i{ font-style:normal; flex:none; width:24px; height:24px; border-radius:50%; display:grid; place-items:center; background:var(--accent); color:#fff; font-family:var(--mono); font-size:12px; }
+.v32-fl-l{ display:flex; flex-direction:column; gap:6px; }
+.v32-fl-l b{ font-family:var(--mono); font-size:12.5px; font-weight:400; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); }
+.v32-fl-l.on b{ color:var(--accent); }
+.v32-fl-l span{ font-size:clamp(13px,.95vw,15px); line-height:1.38; color:var(--mute); }
+.v32-fl-c{ font-size:clamp(15px,1.12vw,18px); line-height:1.4; color:var(--ink-2); }
+.v32-fl > .on{ background:rgba(59,91,255,.04); }
+.v32-fl{ align-items:stretch; }
+.v32-fl > div{ display:flex; align-items:center; }
+.v32-fl > div.v32-fl-l{ justify-content:center; align-items:flex-start; }
+.v32-fl-c{ font-size:clamp(17px,1.3vw,22px) !important; color:var(--ink) !important; }
+.v32-fl-l b{ font-size:13px !important; }
+.v32-same{ grid-row:span 2; justify-content:flex-start; background:linear-gradient(90deg,rgba(59,91,255,.0),rgba(59,91,255,.0)); border-right:1px solid var(--line-2); }
+.v32-cols{ margin-top:5.5vh; width:min(1200px,90vw); display:grid; gap:0 48px; text-align:left; }
+.v32-cols.n2{ grid-template-columns:repeat(2,1fr); width:min(960px,88vw); }
+.v32-cols.n3{ grid-template-columns:repeat(3,1fr); }
+.v32-cols > div{ padding-top:20px; border-top:1.5px solid var(--ink); }
+.v32-cols > div:first-child{ border-top-color:var(--accent); }
+.v32-cols .k{ font-family:var(--mono); font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+.v32-cols .t{ margin-top:12px; font-size:clamp(24px,2vw,34px); font-weight:500; letter-spacing:-.02em; line-height:1.1; color:var(--ink); }
+.v32-cols .d{ margin-top:12px; font-size:clamp(16px,1.2vw,20px); line-height:1.45; color:var(--mute); }
+@media (max-width:900px){
+  .v32-two, .v32-cols.n2, .v32-cols.n3{ grid-template-columns:1fr; width:100%; gap:14px; }
+  .v32-two li{ grid-template-columns:1fr; gap:4px; }
+  .v32-fl{ grid-template-columns:1fr; width:100%; }
+  .v32-fl > div.v32-fl-c{ padding:10px 14px; }
+  .v32-same{ grid-row:auto; border-right:0; }
+  .v32-fl > div.v32-fl-c{ display:block; }
+  .v32-fl > div.v32-fl-l{ align-items:center; }
+  .v32-fl-h{ display:none !important; }
+  .v32-fl-l{ grid-column:1 / -1; padding-top:22px !important; }
+  .v32-fl-c::before{ content:attr(data-s); color:var(--mute); white-space:pre; }
+}
 </style>
 </head>
 <body>
@@ -1083,24 +1115,34 @@
     </div>
   </div>
   <p class="quiet rise d3">Leadership sees company and team reports, managers their own teams. <b>Names are anonymous by default.</b> <span class="m30-mask"><b>Masking is optional</b> on your servers.</span></p>
-  </section>
-<section class="v31 v32-dep">
-  <div class="eyebrow rise">Deployment</div>
-  <h2 class="rise d1">One pipeline. <em>Two places to run it.</em></h2>
-  <div class="v32-tbl rise d2">
-    <div class="r h"><b></b><div class="c o">Silow servers</div><div class="c y">Your servers</div></div>
-    <div class="r"><b>Recorder</b><div class="c o">Your laptops</div><div class="c y">Your laptops</div></div>
-    <div class="r"><b>Storage</b><div class="c o">OVHcloud US</div><div class="c y">S3-compatible, on your VM or your cloud bucket</div></div>
-    <div class="r"><b>Masking model</b><div class="c o">Ours, on OVHcloud US</div><div class="c y">Yours, in your network</div></div>
-    <div class="r"><b>Analysis model</b><div class="c o">Ours, on OVHcloud US</div><div class="c y">On your GPU, or your cloud account</div></div>
-    <div class="r"><b>Who operates</b><div class="c o">Silow</div><div class="c y">Your IT</div></div>
-    <div class="r"><b>Fastest start</b><div class="c o">Yes, install the recorder</div><div class="c y">One Docker Compose package, installed offline</div></div>
-    <div class="r last"><b>Setup time</b><div class="c o">Minutes</div><div class="c y">Days, your IT installs with our support</div></div>
-  </div>
-  <p class="v31-foot rise d3">Same recorder, same reports, same quality. The difference is <b>where each step runs and who operates it</b>. The masking model always runs where the recordings are, because it has to see the screen to mask it.</p>
 </section>
-<section class="v31 v32-dep">
-  <div class="eyebrow rise">Deployment <b>·</b> on your servers</div>
+<section class="v31 v32-cmp">
+  <div class="eyebrow rise">Deployment</div>
+  <h2 class="rise d1">Our servers <em>or yours.</em></h2>
+  <p class="v31-sub rise d1">The choice decides what leaves your network.</p>
+  <div class="v32-two rise d2">
+    <div>
+      <div class="k">Silow-hosted</div>
+      <div class="t">We run it for you.</div>
+      <div class="v32-leave">Leaves your network: <b>recordings</b>, to Silow at OVHcloud US.</div>
+      <div class="b">Fastest start. We run masking and analysis as your data processor under contract.</div>
+    </div>
+    <div class="on">
+      <div class="k">On your servers <span>Proposed for you</span></div>
+      <div class="t">You run it in your network.</div>
+      <div class="v32-leave">Leaves your network: <b>nothing</b>, when the analysis model runs on your GPU servers.</div>
+      <div class="b">Option: run the analysis model in your own Azure, AWS or GCP account. Then only masked data leaves, and only into your account.</div>
+    </div>
+  </div>
+  <p class="v31-foot rise d3">The masking model has to see the raw screen to mask it. <b>That is why it always runs where the recordings are.</b></p>
+</section>
+<section class="v31 v32-flowsl">
+  <div class="eyebrow rise">Deployment <b>·</b> how it runs</div>
+  <h2 class="rise d1">Same five steps. <em>Different place.</em></h2>
+  <div class="v32-fl rise d2"><div class="v32-fl-h"></div><div class="v32-fl-h"><i>1</i>Recorder</div><div class="v32-fl-h"><i>2</i>Storage</div><div class="v32-fl-h"><i>3</i>Masking model</div><div class="v32-fl-h"><i>4</i>Analysis model</div><div class="v32-fl-h"><i>5</i>Reports and chat</div><div class="v32-fl-l"><b>Our servers</b></div><div class="v32-fl-c v32-same" data-s="Recorder · ">Each laptop, Windows or Mac</div><div class="v32-fl-c" data-s="Storage · ">Silow cloud</div><div class="v32-fl-c" data-s="Masking model · ">Silow cloud</div><div class="v32-fl-c" data-s="Analysis model · ">Silow cloud</div><div class="v32-fl-c" data-s="Reports and chat · ">Silow web app</div><div class="v32-fl-l on"><b>Your servers</b></div><div class="v32-fl-c on" data-s="Storage · ">Your storage</div><div class="v32-fl-c on" data-s="Masking model · ">Your GPU server</div><div class="v32-fl-c on" data-s="Analysis model · ">Your GPU server</div><div class="v32-fl-c on" data-s="Reports and chat · ">Your network</div></div>
+</section>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
   <h2 class="rise d1">What you provide. <em>What we ship.</em></h2>
   <div class="v31-two rise d2">
     <div><div class="k">Your IT provides</div><ul>
@@ -1118,8 +1160,8 @@
   </div>
   <p class="v31-foot rise d3">Hardware is sized from three numbers: <b>users, recorded hours a day, and how long you keep data.</b> We send the spec once the pilot scope is set.</p>
 </section>
-<section class="v31 v32-dep">
-  <div class="eyebrow rise">Deployment <b>·</b> on your servers</div>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
   <h2 class="rise d1">On the laptop, <em>and after it.</em></h2>
   <div class="v31-two rise d2">
     <div><div class="k">On each laptop</div><ul>
@@ -1134,43 +1176,31 @@
       <li><b>People decide.</b> No automated decisions about employees</li></ul></div>
   </div>
 </section>
-<section class="v31 v32-dep">
-  <div class="eyebrow rise">Deployment <b>·</b> next step</div>
+<section class="v31 v31-dep">
+  <div class="lvl"><span class="done"><i>1</i>Our servers</span><span class="on"><i>2</i>Your servers</span></div>
   <h2 class="rise d1">One technical review. <em>Then the pilot.</em></h2>
   <p class="v31-sub rise d1">Your infrastructure and security owners with our engineers, on your setup, before anyone is recorded.</p>
-  <div class="v31-cards c4 rise d2">
-    <div><div class="t">Capture and masking</div><div class="d">Set what is recorded. Test masking on your own sample screens.</div></div>
-    <div><div class="t">Hosting and model</div><div class="d">Trace every payload. Confirm where each model runs and that nothing else leaves.</div></div>
-    <div><div class="t">Retention and access</div><div class="d">Set deletion of raw recordings, who sees which report, and any support access.</div></div>
-    <div><div class="t">Owners and evidence</div><div class="d">Who runs what, how incidents are handled, what counts as accepted.</div></div>
-  </div>
+  <div class="v31-cards c4  rise d2"><div><div class="t">Capture and masking</div><div class="d">Set what is recorded. Test masking on your own sample screens.</div></div><div><div class="t">Hosting and model</div><div class="d">Trace every payload. Confirm where each model runs and that nothing else leaves.</div></div><div><div class="t">Retention and access</div><div class="d">Set deletion of raw recordings, who sees which report, and any support access.</div></div><div><div class="t">Owners and evidence</div><div class="d">Who runs what, how incidents are handled, what counts as accepted.</div></div></div>
   <p class="v31-foot rise d3">Output: <b>one agreed architecture, a control checklist and an acceptance record.</b> Before it, we send the architecture, requirements, rollout, data-handling and support documents.</p>
 </section>
 <section class="v31 v31-m">
   <div class="eyebrow rise">How we start <b>·</b> the first month is free</div>
   <div class="lvl"><span class="on"><i>1</i>Onboarding</span><span class=""><i>2</i>Four weeks</span><span class=""><i>3</i>Debrief</span></div>
   <h2 class="rise d1">One onboarding call. <em>Then the install.</em></h2>
-  <div class="v32-onb rise d2">
-    <div><b>The pilot group</b><span>20–50 people who run the processes you most want to see, plus one manager on your side who owns the pilot.</span></div>
-    <div><b>The call</b><span>We agree the team, the goal and any custom dashboards, and finalize what to deploy. If you want, a short session for your top managers on what this is for.</span></div>
-    <div><b>Install</b><span>Your IT deploys and pushes the recorder through your device management. Recording starts.</span></div>
-  </div>
+  <div class="v32-cols n3 rise d2"><div><div class="k">Who</div><div class="t">Your team</div><div class="d">20–50 people who run the processes you most want to see, and one manager who owns the pilot.</div></div><div><div class="k">The call</div><div class="t">Agree the scope</div><div class="d">The team, the goal and any custom dashboards. Optional: a short session for your top managers.</div></div><div><div class="k">Then</div><div class="t">Install</div><div class="d">Your IT deploys it and pushes the recorder. Recording starts.</div></div></div>
 </section>
 <section class="v31 v31-m">
   <div class="eyebrow rise">How we start <b>·</b> weeks 1 to 4</div>
   <div class="lvl"><span class="done"><i>1</i>Onboarding</span><span class="on"><i>2</i>Four weeks</span><span class=""><i>3</i>Debrief</span></div>
-  <h2 class="rise d1">Every week, <em>a checkpoint.</em></h2>
-  <div class="v32-onb rise d2">
-    <div><b>From week 1</b><span>Reports, process maps and the automation plan go live, and update every week.</span></div>
-    <div><b>Every week</b><span>A short call with your manager, or with everyone involved: what the data shows, what to fix, what to look at next.</span></div>
-    <div><b>Two people own it</b><span>One person on our side responsible for your team, one manager on yours. Weekly calls catch problems in week one.</span></div>
-  </div>
+  <h2 class="rise d1">Every week, <em>a checkpoint with your manager.</em></h2>
+  <div class="v32-cols n2 rise d2"><div><div class="k">From week 1</div><div class="t">Results go live</div><div class="d">Reports, process maps and the automation plan, updated every week.</div></div><div><div class="k">Every week</div><div class="t">A short call</div><div class="d">Your manager and one owner on our side: what the data shows, what to fix, what to look at next.</div></div></div>
+  <p class="v31-foot rise d3">Weekly calls catch problems in week one, not at the end of the month.</p>
 </section>
 <section class="v31 v31-m">
   <div class="eyebrow rise">How we start <b>·</b> end of the month</div>
   <div class="lvl"><span class="done"><i>1</i>Onboarding</span><span class="done"><i>2</i>Four weeks</span><span class="on"><i>3</i>Debrief</span></div>
-  <h2 class="rise d1">One joint session. <em>What you get.</em></h2>
-  <div class="v32-onb four rise d2"><div><b>Automation plan</b><span>Step by step: what to automate first and the hours it frees.</span></div><div><b>Process documentation</b><span>Every step of the processes in scope, ready to export.</span></div><div><b>People compared</b><span>How different people run the same work, and who does it fastest.</span></div><div><b>A new view of your processes</b><span>Where work waits, repeats or runs outside your systems.</span></div></div>
+  <h2 class="rise d1">One joint session. <em>The full picture.</em></h2>
+  <div class="v32-cols n3 rise d2"><div><div class="k">01</div><div class="t">Automation plan</div><div class="d">What to automate first, step by step, and the hours it frees.</div></div><div><div class="k">02</div><div class="t">Your processes</div><div class="d">Every step documented and ready to export. Where work waits, repeats or runs outside your systems.</div></div><div><div class="k">03</div><div class="t">Your people</div><div class="d">How different people run the same work, and who does it fastest.</div></div></div>
 </section>
 <section class="s-depth s-prod v31-demo">
   <h2>Home and chat: <em>start from the answer.</em></h2>
