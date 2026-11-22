@@ -491,6 +491,19 @@
 .v32-onb b{ font-size:clamp(20px,1.6vw,27px); font-weight:500; letter-spacing:-.02em; color:var(--ink); line-height:1.15; }
 .v32-onb span{ font-size:clamp(15px,1.15vw,19px); line-height:1.45; color:var(--mute); }
 @media (max-width:900px){ .v32-tbl{ width:100%; } .v32-tbl .r{ grid-template-columns:1fr; } .v32-tbl .r > b{ padding-bottom:2px; } .v32-tbl .r.h{ display:none; } .v32-tbl .r .c.o::before{ content:"Silow servers · "; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); } .v32-tbl .r .c.y::before{ content:"Your servers · "; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); } .v32-onb, .v32-onb.four{ grid-template-columns:1fr; width:100%; } }
+
+/* v33: deployment overview */
+.v33-two{ margin-top:5vh; display:grid; grid-template-columns:1fr 1fr; gap:16px; width:min(1200px,88vw); text-align:left; }
+.v33-two > div{ padding:30px 30px 28px; border-radius:18px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); display:flex; flex-direction:column; gap:14px; }
+.v33-two > div.on{ box-shadow:inset 0 0 0 1.5px var(--accent); background:rgba(59,91,255,.03); }
+.v33-two .k{ font-family:var(--mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--mute); display:flex; gap:10px; align-items:center; }
+.v33-two .on .k{ color:var(--accent); }
+.v33-two .k span{ padding:3px 8px; border-radius:6px; background:var(--accent); color:#fff; font-size:10.5px; }
+.v33-two .t{ font-size:clamp(26px,2.3vw,40px); font-weight:500; letter-spacing:-.025em; line-height:1.1; color:var(--ink); }
+.v33-two .b{ font-size:clamp(16px,1.25vw,21px); line-height:1.45; color:var(--mute); flex:1 1 auto; }
+.v33-two .lv{ padding-top:14px; border-top:1px solid var(--line-2); font-size:clamp(16px,1.25vw,21px); color:var(--ink-2); }
+.v33-two .lv b{ font-weight:500; color:var(--ink); }
+@media (max-width:900px){ .v33-two{ grid-template-columns:1fr; width:100%; } }
 </style>
 </head>
 <body>
@@ -1084,6 +1097,24 @@
   </div>
   <p class="quiet rise d3">Leadership sees company and team reports, managers their own teams. <b>Names are anonymous by default.</b> <span class="m30-mask"><b>Masking is optional</b> on your servers.</span></p>
   </section>
+<section class="v31 v33-ov">
+  <div class="eyebrow rise">Deployment</div>
+  <h2 class="rise d1">Our servers <em>or yours.</em></h2>
+  <div class="v33-two rise d2">
+    <div>
+      <div class="k">Silow servers</div>
+      <div class="t">We run it for you.</div>
+      <div class="b">Install the recorder and go. Masking and analysis run on our servers at OVHcloud US, with no outside AI providers.</div>
+      <div class="lv">Leaves your network: <b>recordings</b>, to Silow.</div>
+    </div>
+    <div class="on">
+      <div class="k">Your servers <span>Proposed for you</span></div>
+      <div class="t">You run it in your network.</div>
+      <div class="b">One package your IT installs. Storage, masking, analysis and reports stay inside your perimeter.</div>
+      <div class="lv">Leaves your network: <b>nothing</b>, when the analysis model runs on your GPU servers.</div>
+    </div>
+  </div>
+</section>
 <section class="v31 v32-dep">
   <div class="eyebrow rise">Deployment</div>
   <h2 class="rise d1">One pipeline. <em>Two places to run it.</em></h2>
