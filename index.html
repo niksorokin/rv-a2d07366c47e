@@ -363,20 +363,29 @@
 .s-rec .m30-opt b, .s-sec .m30-mask b{ color:var(--ink); font-weight:500; }
 .m30-tag{ margin-left:2px; padding:3px 7px; border-radius:6px; background:rgba(59,91,255,.10); color:var(--accent); font-size:10.5px; letter-spacing:.12em; }
 
-/* v30: four week cards + recording rail */
-.m30{ margin-top:6vh; width:min(1240px,86vw); text-align:left; }
-.m30-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
-.m30-wk{ display:flex; flex-direction:column; padding:22px 22px 20px; border-radius:16px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); }
-.m30-n{ font-family:var(--mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); }
-.m30-t{ margin-top:12px; font-size:clamp(20px,1.6vw,27px); font-weight:500; letter-spacing:-0.02em; color:var(--ink); line-height:1.15; }
-.m30-t em{ font-style:normal; color:var(--accent); }
-.m30-d{ margin-top:10px; font-size:clamp(15px,1.1vw,18px); line-height:1.4; color:var(--mute); flex:1 1 auto; }
-.m30-chip{ align-self:flex-start; margin-top:18px; padding:6px 10px; border-radius:8px; font-size:14px; font-weight:500; color:var(--accent); background:rgba(59,91,255,.08); }
-.m30-chip.dk{ background:var(--ink); color:#fff; }
-.m30-rail{ margin-top:14px; display:flex; align-items:center; gap:12px; height:48px; padding:0 20px; border-radius:14px; background:var(--paper-2); color:var(--ink-2); font-size:clamp(15px,1.15vw,19px); font-weight:500; }
-.m30-rail i{ width:10px; height:10px; border-radius:50%; background:#E5484D; box-shadow:0 0 0 4px rgba(229,72,77,.15); flex:none; }
-.m30-rail span{ margin-left:auto; font-family:var(--mono); font-weight:400; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--mute); background:#fff; padding:4px 8px; border-radius:6px; }
-@media (max-width:900px){ .m30{ width:100%; margin-top:4vh; } .m30-grid{ grid-template-columns:1fr; gap:10px; } .m30-wk{ padding:16px; } .m30-rail{ height:auto; padding:12px 14px; flex-wrap:wrap; } .m30-rail span{ margin-left:0; } }
+/* v30: light timeline */
+.m31{ position:relative; margin-top:6.5vh; width:min(1200px,84vw); height:236px; text-align:left; }
+.m31-grid{ position:absolute; inset:0 0 30px 0; display:grid; grid-template-columns:repeat(4,1fr); pointer-events:none; }
+.m31-grid i{ border-left:1px dashed var(--line-2); }
+.m31-grid i:last-child{ border-right:1px dashed var(--line-2); }
+.m31-bar{ position:absolute; height:42px; border-radius:12px; display:flex; flex-direction:row; justify-content:flex-start; text-align:left; align-items:center; gap:10px; padding:0 16px; font-size:clamp(14px,1.05vw,17px); font-weight:500; letter-spacing:-.01em; white-space:nowrap; overflow:hidden; }
+.m31-bar small{ font-family:var(--mono); font-weight:400; font-size:11px; letter-spacing:.08em; text-transform:uppercase; opacity:.75; }
+.m31-bar.m31-ob{ top:10px; background:#fff; color:var(--ink); box-shadow:inset 0 0 0 1px var(--line-2); }
+.m31-bar.m31-rec{ top:62px; background:var(--paper-2); color:var(--ink-2); }
+.m31-bar.m31-out{ top:114px; background:var(--accent); color:#fff; }
+.m31-ms{ position:absolute; left:0; right:0; top:168px; height:30px; }
+.m31-ck{ position:absolute; top:0; transform:translateX(-50%); display:flex; align-items:center; gap:7px; font-size:14px; font-weight:500; color:var(--accent); background:var(--paper, #fff); padding:4px 8px; white-space:nowrap; }
+.m31-ck i{ width:9px; height:9px; border-radius:50%; background:var(--accent); }
+.m31-db{ position:absolute; right:0; top:0; padding:5px 12px; border-radius:8px; background:var(--ink); color:#fff; font-size:14px; font-weight:500; }
+.m31-axis{ position:absolute; left:0; right:0; bottom:0; height:18px; font-family:var(--mono); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); }
+.m31-axis span{ position:absolute; transform:translateX(-50%); white-space:nowrap; }
+@media (max-width:900px){
+  .m31{ width:100%; height:auto; display:flex; flex-direction:column; gap:8px; margin-top:4vh; }
+  .m31-grid, .m31-axis{ display:none; }
+  .m31-bar{ position:static; width:100% !important; height:auto; min-height:42px; white-space:normal; padding:8px 14px; }
+  .m31-ms{ position:static; height:auto; display:flex; flex-wrap:wrap; gap:6px; }
+  .m31-ck, .m31-db{ position:static; transform:none; }
+}
 
 /* v30b: goals, demo placeholders, cases */
 .s-goals{ justify-content:center; }
@@ -550,9 +559,13 @@
   <div class="eyebrow rise">How we start</div>
   <h2 class="rise d1">First month <em>free.</em></h2>
   <div class="sub rise d1">20–30 people<span>·</span>one team you choose<span>·</span>results after week one</div>
-  <div class="m30 rise d2" aria-label="Four weeks: onboarding and install in parallel, reports live from week two, a manager checkpoint every week, a debrief at the end of the month">
-    <div class="m30-grid"><div class="m30-wk"><div class="m30-n">Week 1</div><div class="m30-t">Onboarding <em>+</em> install</div><div class="m30-d">In parallel: the team hears what it’s for while the recorder goes on.</div><div class="m30-chip">Manager checkpoint</div></div><div class="m30-wk"><div class="m30-n">Week 2</div><div class="m30-t">Reports go live</div><div class="m30-d">Process maps and the automation plan, updated every week.</div><div class="m30-chip">Manager checkpoint</div></div><div class="m30-wk"><div class="m30-n">Week 3</div><div class="m30-t">The plan sharpens</div><div class="m30-d">Another week of real runs behind every step and estimate.</div><div class="m30-chip">Manager checkpoint</div></div><div class="m30-wk"><div class="m30-n">Week 4</div><div class="m30-t">Debrief</div><div class="m30-d">Together: what to automate first, and why.</div><div class="m30-chip dk">End of month</div></div></div>
-    <div class="m30-rail"><i></i>Recording runs in the background<span>all four weeks</span></div>
+  <div class="m31 rise d2" aria-label="Four weeks: onboarding and install in parallel, recording all month, reports from week two, a manager checkpoint every week, a debrief at the end">
+    <div class="m31-grid"><i></i><i></i><i></i><i></i></div>
+    <div class="m31-bar m31-ob" style="left:0;width:23%">Onboarding + install<small>in parallel</small></div>
+    <div class="m31-bar m31-rec" style="left:0;width:100%">Recording runs in the background</div>
+    <div class="m31-bar m31-out" style="left:25%;width:75%">Reports · process maps · automation plan<small>updated weekly</small></div>
+    <div class="m31-ms"><div class="m31-ck" style="left:25%"><i></i>Checkpoint</div><div class="m31-ck" style="left:50%"><i></i>Checkpoint</div><div class="m31-ck" style="left:75%"><i></i>Checkpoint</div><div class="m31-db">Debrief</div></div>
+    <div class="m31-axis"><span style="left:12.5%">Week 1</span><span style="left:37.5%">Week 2</span><span style="left:62.5%">Week 3</span><span style="left:87.5%">Week 4</span></div>
   </div>
 </section>
 <section class="dark s-layers s-iso">
@@ -1022,15 +1035,6 @@
     <li><i>03</i><b>Any output</b><span>Reports, maps and plans</span></li>
   </ol>
 </section>
-<section class="s-goals">
-  <div class="eyebrow rise">What you asked for</div>
-  <h2 class="rise d1">Three goals. <em>Here is each one, in the product.</em></h2>
-  <div class="m30-goals rise d2">
-    <div><i>1</i><b>Process documentation</b><span>without consultants watching over shoulders.</span></div>
-    <div><i>2</i><b>An automation plan to act on</b><span>not a report: the input for building agents.</span></div>
-    <div><i>3</i><b>Visibility into productivity</b><span>how each team and each person actually works.</span></div>
-  </div>
-</section>
 <section class="s-depth s-prod">
   <div class="lvl"><span class="on"><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class="on"><i>3</i>People visibility</span></div>
   <h2>Home: what matters, the moment you open it.</h2>
@@ -1038,16 +1042,16 @@
   <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Home screen</div><div class="m30-ph-r">#home</div><ul><li>Top insights across the company</li><li>Where to go next: processes, teams, people</li><li>Ask Silow about any number</li></ul></div></div>
 </section>
 <section class="s-depth s-prod">
-  <div class="lvl"><span class=""><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class=""><i>3</i>People visibility</span></div>
-  <h2>Process &amp; automation: every process, ranked by hours back.</h2>
-  <p class="line">Each team’s processes, what can be automated in each, and <b>what it returns a week.</b></p>
-  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Process &amp; automation</div><div class="m30-ph-r">#plan</div><ul><li>Automation plan by team → process → hours and money back</li><li>Process maps with a short description of each</li><li>Open any process to see its steps</li></ul></div></div>
-</section>
-<section class="s-depth s-prod">
   <div class="lvl"><span class="on"><i>1</i>Process documentation</span><span class=""><i>2</i>Automation plan</span><span class=""><i>3</i>People visibility</span></div>
   <h2>One process: documented from how it really runs.</h2>
   <p class="line">Every step, its system and its time. <b>Export the whole process, or one step, as documentation.</b></p>
   <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Process page · export</div><div class="m30-ph-r">#process/…</div><ul><li>Every step with measured time and the people who run it</li><li>Fastest path and exceptions inside each step</li><li>Export: Word, PDF, Visio, Markdown, CSV</li></ul></div></div>
+</section>
+<section class="s-depth s-prod">
+  <div class="lvl"><span class=""><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class=""><i>3</i>People visibility</span></div>
+  <h2>Process &amp; automation: every process, ranked by hours back.</h2>
+  <p class="line">Each team’s processes, what can be automated in each, and <b>what it returns a week.</b></p>
+  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Process &amp; automation</div><div class="m30-ph-r">#plan</div><ul><li>Automation plan by team → process → hours and money back</li><li>Process maps with a short description of each</li><li>Open any process to see its steps</li></ul></div></div>
 </section>
 <section class="s-depth s-prod">
   <div class="lvl"><span class=""><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class=""><i>3</i>People visibility</span></div>
