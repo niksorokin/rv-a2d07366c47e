@@ -377,6 +377,32 @@
 .m30-rail i{ width:10px; height:10px; border-radius:50%; background:#E5484D; box-shadow:0 0 0 4px rgba(229,72,77,.15); flex:none; }
 .m30-rail span{ margin-left:auto; font-family:var(--mono); font-weight:400; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--mute); background:#fff; padding:4px 8px; border-radius:6px; }
 @media (max-width:900px){ .m30{ width:100%; margin-top:4vh; } .m30-grid{ grid-template-columns:1fr; gap:10px; } .m30-wk{ padding:16px; } .m30-rail{ height:auto; padding:12px 14px; flex-wrap:wrap; } .m30-rail span{ margin-left:0; } }
+
+/* v30b: goals, demo placeholders, cases */
+.s-goals{ justify-content:center; }
+.s-goals h2{ font-size:clamp(44px,4.6vw,80px); max-width:none; }
+.m30-goals{ margin-top:6vh; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; width:min(1240px,86vw); text-align:left; }
+.m30-goals > div{ padding:26px 24px; border-radius:16px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); display:flex; flex-direction:column; gap:8px; }
+.m30-goals i{ font-style:normal; width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:var(--accent); color:#fff; font-family:var(--mono); font-size:13px; margin-bottom:8px; }
+.m30-goals b{ font-size:clamp(20px,1.6vw,27px); font-weight:500; letter-spacing:-0.02em; color:var(--ink); line-height:1.15; }
+.m30-goals span{ font-size:clamp(15px,1.15vw,19px); line-height:1.4; color:var(--mute); }
+.s-prod .lvl span{ white-space:nowrap; }
+.m30-ph{ display:flex; align-items:center; justify-content:center; background:repeating-linear-gradient(135deg,#F4F5F7 0 14px,#EFF1F4 14px 28px); box-shadow:inset 0 0 0 1.5px rgba(59,91,255,.25); }
+.m30-ph-in{ text-align:left; padding:28px 34px; border-radius:14px; background:#fff; box-shadow:0 0 0 1px var(--line-2), 0 20px 50px -30px rgba(14,14,12,.3); max-width:560px; }
+.m30-ph-k{ font-family:var(--mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
+.m30-ph-r{ margin-top:6px; font-family:var(--mono); font-size:13px; color:var(--faint); }
+.m30-ph-in ul{ margin:16px 0 0; padding-left:20px; font-size:clamp(16px,1.2vw,20px); line-height:1.5; color:var(--ink-2); }
+.s-cases{ justify-content:center; }
+.s-cases h2{ font-size:clamp(44px,4.6vw,80px); max-width:none; }
+.m30-cases{ margin-top:5vh; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; width:min(1320px,90vw); text-align:left; }
+.m30-case{ padding:24px 24px 22px; border-radius:16px; background:#fff; box-shadow:inset 0 0 0 1px var(--line-2); }
+.m30-case .m30-ck{ font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--mute); line-height:1.5; min-height:3em; }
+.m30-case .m30-row{ margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
+.m30-case .m30-row span{ font-family:var(--mono); font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
+.m30-case .m30-row + .m30-row span{ color:var(--ink); }
+.m30-case .m30-row p{ margin:6px 0 0; font-size:clamp(16px,1.2vw,20px); line-height:1.42; color:var(--ink-2); }
+.m30-case .m30-row p b{ font-weight:500; color:var(--ink); }
+@media (max-width:900px){ .s-prod .lvl{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px 0; } .s-prod .lvl span{ white-space:normal; } .s-prod .lvl span + span::before{ display:none; } .s-prod .lvl span{ margin:0 6px; } .m30-goals, .m30-cases{ grid-template-columns:1fr; width:100%; } .m30-ph-in{ padding:18px; margin:14px; } .m30-case .m30-ck{ min-height:0; } }
 </style>
 </head>
 <body>
@@ -996,29 +1022,50 @@
     <li><i>03</i><b>Any output</b><span>Reports, maps and plans</span></li>
   </ol>
 </section>
-<section class="s-depth">
-  <div class="lvl"><span class="on"><i>1</i>Company</span><span class=""><i>2</i>Team</span><span class=""><i>3</i>Process</span><span class=""><i>4</i>Build plan</span></div>
-  <h2>Company report: where every team’s time goes.</h2>
-  <p class="line">Hours by team and type of work, and the biggest automation opportunities. Here: <b>3,112 h in three weeks, 42% AI could take or draft.</b></p>
-  <div class="appframe"><iframe title="Silow · company report" data-src="app2/index.html?embed=1#company"></iframe></div>
+<section class="s-goals">
+  <div class="eyebrow rise">What you asked for</div>
+  <h2 class="rise d1">Three goals. <em>Here is each one, in the product.</em></h2>
+  <div class="m30-goals rise d2">
+    <div><i>1</i><b>Process documentation</b><span>without consultants watching over shoulders.</span></div>
+    <div><i>2</i><b>An automation plan to act on</b><span>not a report: the input for building agents.</span></div>
+    <div><i>3</i><b>Visibility into productivity</b><span>how each team and each person actually works.</span></div>
+  </div>
 </section>
-<section class="s-depth">
-  <div class="lvl"><span class="done"><i>1</i>Company</span><span class="on"><i>2</i>Team</span><span class=""><i>3</i>Process</span><span class=""><i>4</i>Build plan</span></div>
-  <h2>Team report: how one team spends its week.</h2>
-  <p class="line">Each work stream, the apps it runs in and the people doing it. Claims intake: <b>45% an agent could take</b>, the biggest stream is FNOL entry.</p>
-  <div class="appframe"><iframe title="Silow · team report" data-src="app2/index.html?embed=1#team/intake"></iframe></div>
+<section class="s-depth s-prod">
+  <div class="lvl"><span class="on"><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class="on"><i>3</i>People visibility</span></div>
+  <h2>Home: what matters, the moment you open it.</h2>
+  <p class="line">The biggest findings across teams, processes and people on one screen. <b>No guide needed to start.</b></p>
+  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Home screen</div><div class="m30-ph-r">#home</div><ul><li>Top insights across the company</li><li>Where to go next: processes, teams, people</li><li>Ask Silow about any number</li></ul></div></div>
 </section>
-<section class="s-depth">
-  <div class="lvl"><span class="done"><i>1</i>Company</span><span class="done"><i>2</i>Team</span><span class="on"><i>3</i>Process</span><span class=""><i>4</i>Build plan</span></div>
-  <h2>Process map: every step, timed from real runs.</h2>
-  <p class="line">Each step, its system and its time, and the one step that slows it down. FNOL to claim set-up: <b>652 notices, 18 steps, slowest is re-keying loss details.</b></p>
-  <div class="appframe"><iframe title="Silow · process map" data-src="app2/index.html?embed=1#case/n1"></iframe></div>
+<section class="s-depth s-prod">
+  <div class="lvl"><span class=""><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class=""><i>3</i>People visibility</span></div>
+  <h2>Process &amp; automation: every process, ranked by hours back.</h2>
+  <p class="line">Each team’s processes, what can be automated in each, and <b>what it returns a week.</b></p>
+  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Process &amp; automation</div><div class="m30-ph-r">#plan</div><ul><li>Automation plan by team → process → hours and money back</li><li>Process maps with a short description of each</li><li>Open any process to see its steps</li></ul></div></div>
 </section>
-<section class="s-depth">
-  <div class="lvl"><span class="done"><i>1</i>Company</span><span class="done"><i>2</i>Team</span><span class="done"><i>3</i>Process</span><span class="on"><i>4</i>Build plan</span></div>
-  <h2>Build plan: every process comes with one.</h2>
-  <p class="line">What gets built, in which systems, hours back a week and who approves it. Ready to hand to IT. This one: <b>FNOL email → claim draft, 36.4 h a week.</b></p>
-  <div class="appframe"><iframe title="Silow · automation plan item" data-src="app2/index.html?embed=1#plan~sug=fnol"></iframe></div>
+<section class="s-depth s-prod">
+  <div class="lvl"><span class="on"><i>1</i>Process documentation</span><span class=""><i>2</i>Automation plan</span><span class=""><i>3</i>People visibility</span></div>
+  <h2>One process: documented from how it really runs.</h2>
+  <p class="line">Every step, its system and its time. <b>Export the whole process, or one step, as documentation.</b></p>
+  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Process page · export</div><div class="m30-ph-r">#process/…</div><ul><li>Every step with measured time and the people who run it</li><li>Fastest path and exceptions inside each step</li><li>Export: Word, PDF, Visio, Markdown, CSV</li></ul></div></div>
+</section>
+<section class="s-depth s-prod">
+  <div class="lvl"><span class=""><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class=""><i>3</i>People visibility</span></div>
+  <h2>The step to automate, with a brief your team can build from.</h2>
+  <p class="line">The slow step, the actions inside it and what an agent would take over. <b>Input for building the agent.</b></p>
+  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Process step · automation brief</div><div class="m30-ph-r">#case/…?step=…</div><ul><li>The step flagged for automation, with time and volume</li><li>What an agent takes over, what stays human</li><li>Export the brief for the build team</li></ul></div></div>
+</section>
+<section class="s-depth s-prod">
+  <div class="lvl"><span class=""><i>1</i>Process documentation</span><span class="on"><i>2</i>Automation plan</span><span class="on"><i>3</i>People visibility</span></div>
+  <h2>Team: recommendations for each team.</h2>
+  <p class="line">Where the team’s week goes and <b>what to change first</b>, with the processes behind it.</p>
+  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Team report</div><div class="m30-ph-r">#team/…</div><ul><li>Recommendations first, then the time breakdown</li><li>Processes and handoffs the team owns</li><li>Who does what, compared with the team median</li></ul></div></div>
+</section>
+<section class="s-depth s-prod">
+  <div class="lvl"><span class=""><i>1</i>Process documentation</span><span class=""><i>2</i>Automation plan</span><span class="on"><i>3</i>People visibility</span></div>
+  <h2>People: every person, and what would help them.</h2>
+  <p class="line">All employees in one list; open anyone for <b>their own recommendations</b>, time and processes.</p>
+  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · People · personal report</div><div class="m30-ph-r">#people → #person/…</div><ul><li>Everyone, with hours, main work and tasks completed</li><li>Personal recommendations for each person</li><li>Visibility set by your admins: names or anonymous</li></ul></div></div>
 </section>
 <section class="s-where">
     <div class="eyebrow rise">Where it helps <b>·</b> examples</div>
@@ -1035,6 +1082,16 @@
       <div><div class="r">Underwriting support</div><div class="d">Submissions re-typed before anyone decides.</div></div>
     </div>
   </section>
+<section class="s-cases">
+  <div class="eyebrow rise">How teams use it <b>·</b> examples, names withheld</div>
+  <h2 class="rise d1">What the recording showed. <em>What came next.</em></h2>
+  <div class="m30-cases rise d2"><div class="m30-case"><div class="m30-ck">Delivery &amp; mobility · operations team, 8 people</div><div class="m30-row"><span>Seen</span><p>Everyone had an AI assistant. The recording found it in almost none of the work: <b>close to 0% of time.</b></p></div><div class="m30-row"><span>Next</span><p>Six team playbooks built from the work the team actually does, each with a ready prompt.</p></div></div><div class="m30-case"><div class="m30-ck">Licensing legal firm · 9 people, 3 teams</div><div class="m30-row"><span>Seen</span><p>Work waited <b>6.4× longer</b> whenever it passed to another person. One regulator PDF was re-attached by hand five times.</p></div><div class="m30-row"><span>Next</span><p>An agent design for each team, built around those handoffs, plus a connector so their AI can query the data.</p></div></div><div class="m30-case"><div class="m30-ck">Law firm · UAE</div><div class="m30-row"><span>Seen</span><p>In one week: documents were only <b>20–30% of lawyers’ time.</b> Client back-and-forth and invoicing were the bottleneck.</p></div><div class="m30-row"><span>Next</span><p>An intake agent that requests and checks client documents and drafts the invoice. A lawyer approves each case.</p></div></div></div>
+</section>
+<section class="s-cases">
+  <div class="eyebrow rise">How teams use it <b>·</b> examples, names withheld</div>
+  <h2 class="rise d1">Same data, <em>different uses.</em></h2>
+  <div class="m30-cases rise d2"><div class="m30-case"><div class="m30-ck">Healthcare back office · US, fully on-premises</div><div class="m30-row"><span>Use</span><p>Record experienced staff for a month, then draft <b>day-by-day onboarding guides</b> for new hires.</p></div><div class="m30-row"><span>Next</span><p>Their own team automates from the same data. It runs on their servers, so <b>nothing reaches Silow.</b></p></div></div><div class="m30-case"><div class="m30-ck">Accounting services · 18 people</div><div class="m30-row"><span>Seen</span><p>Hand-written process descriptions didn’t match the recording. Building the daily task queue took <b>up to 27%</b> of a team’s time, partly in spreadsheets.</p></div><div class="m30-row"><span>Next</span><p>Choosing the first processes to hand to agents, with the recordings as the spec.</p></div></div><div class="m30-case"><div class="m30-ck">Accounting firm · UAE</div><div class="m30-row"><span>Built</span><p>One shared knowledge base for the team (mail, meeting notes, tasks) with an agent that writes <b>weekly summaries and a morning brief.</b></p></div><div class="m30-row"><span>Next</span><p>Client onboarding, from documents to the engagement letter, in testing.</p></div></div></div>
+</section>
 <section class="s-close">
   <h2 class="rise">Pick a team.<br><em>Start the free month.</em></h2>
   <p class="lede rise d1">20–30 people and one process you care about. Debrief at the end of the month.</p>
