@@ -4271,7 +4271,7 @@ function procStats(pr){ const hands=Math.round(pr.steps.reduce((a,s)=>a+s.min,0)
 const pmin = min => CX.dur(min*60);
 
 /* ---------- state & helpers ---------- */
-const S = { view:'home', person:'rachel', team:'fin', wi:2, per:'all', anon:true, cost:55, proc:'n3', tab:'plan', sel:null, inPlan:new Set(), msgs:[], dept:null, askMode:false, mapsOpen:new Set(), psort:null, pdir:-1, cmp:'teams' };
+const S = { view:'home', person:'rachel', team:'fin', wi:2, per:2, anon:true, cost:55, proc:'n3', tab:'plan', sel:null, inPlan:new Set(), msgs:[], dept:null, askMode:false, mapsOpen:new Set(), psort:null, pdir:-1, cmp:'teams' };
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
