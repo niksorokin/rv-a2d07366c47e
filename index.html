@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Silow — for insurance operations</title><!-- rev:ins-v50 -->
+<title>Silow — for insurance operations</title><!-- rev:ins-v51 -->
 <style>
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
@@ -785,6 +785,56 @@
   .gk{ border-left:0; border-top:1px solid var(--line-2); padding:18px 14px; }
   .gk svg{ height:90px; flex:none; }
 }
+
+/* v51: shared card language */
+.gk-lbl.c{ text-align:center; width:auto; }
+.v51-hl{ position:relative; }
+.v51-hl > u{ position:absolute; z-index:3; width:10px; height:10px; border:0 solid var(--accent); pointer-events:none; }
+.v51-hl > .tk1{ left:0; top:0; border-left-width:2px; border-top-width:2px; } .v51-hl > .tk2{ right:0; top:0; border-right-width:2px; border-top-width:2px; }
+.v51-hl > .tk3{ left:0; bottom:0; border-left-width:2px; border-bottom-width:2px; } .v51-hl > .tk4{ right:0; bottom:0; border-right-width:2px; border-bottom-width:2px; }
+/* 03 */
+.s-rec .gk-lbl.c{ margin-top:3vh; }
+.v51-pills{ gap:10px !important; margin-top:12px !important; }
+.v51-pills span{ border-left:0 !important; padding:8px 16px !important; border-radius:999px; box-shadow:inset 0 0 0 1px var(--line-2); font-family:var(--mono); font-size:12px !important; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-2); }
+.rec-zoom.v51-hl{ padding:14px; background:linear-gradient(180deg,#F1F4FF,#fff 80%); box-shadow:inset 0 0 0 1px rgba(59,91,255,.28); }
+.rec-zoom.v51-hl .zf{ box-shadow:0 20px 40px -24px rgba(14,14,12,.4); }
+/* 04 */
+.s-sec .gk-lbl.c{ margin-top:3.5vh; }
+.s-sec .v51-desk{ margin-top:14px !important; }
+.v51-desk .desk-in{ gap:0 !important; }
+.v51-desk .wcol{ padding:18px 20px 20px; border-left:1px solid var(--line-2); }
+.v51-desk .wcol:first-child{ border-left:0; }
+.v51-desk .wcol.v51-hl{ border-left-color:transparent; background:linear-gradient(180deg,#F1F4FF,#fff 80%); box-shadow:inset 0 0 0 1px rgba(59,91,255,.28); }
+.v51-desk .wcol.v51-hl + .wcol{ border-left-color:transparent; }
+.v51-desk .m30-tag{ border-radius:999px; padding:3px 9px; }
+/* 05 */
+.v47-dep .gk-lbl{ margin-top:5vh; }
+.v47-dep .v47-grid{ margin-top:14px; }
+.v51-row{ margin:-8px -10px; background:linear-gradient(180deg,#F1F4FF,#fff 85%); box-shadow:inset 0 0 0 1px rgba(59,91,255,.28); z-index:0; }
+.v47-grid .lb, .v47-grid .b{ position:relative; z-index:1; }
+.v47-grid .lb em{ border-radius:999px; padding:3px 9px; }
+/* 06 */
+.v51-card{ padding:clamp(28px,3.5vh,44px) clamp(28px,2.6vw,44px); background:linear-gradient(180deg,#F1F4FF,#fff 80%); box-shadow:inset 0 0 0 1px rgba(59,91,255,.28); }
+/* 07 */
+.v43-tbl{ position:relative; }
+.v51-col{ position:absolute; inset:0; background:linear-gradient(180deg,#F1F4FF,#fff 90%); box-shadow:inset 0 0 0 1px rgba(59,91,255,.28); border-bottom:0 !important; z-index:0; }
+.v43-tbl .c, .v43-tbl .hd{ position:relative; z-index:1; }
+.v43-tbl .c.y{ background:transparent !important; }
+.v43-tbl .hd{ padding-top:16px; }
+/* 08 */
+.v44-tl .gk-lbl{ margin-top:4vh; }
+.v44-tl .v43-grid{ margin-top:14px; }
+.v43-grid .db.v51-hl{ background:linear-gradient(180deg,#F1F4FF,#fff 90%); box-shadow:inset 0 0 0 1px rgba(59,91,255,.28); color:var(--accent); border-radius:0; }
+.v43-grid .setup, .v43-grid .onb, .v43-grid .rec, .v43-grid .out{ border-radius:0; }
+/* 16 */
+.v51-pill{ display:inline-block; margin-top:40px; padding:10px 22px; border-radius:999px; box-shadow:inset 0 0 0 1px var(--line-2); font-family:var(--mono); font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); text-decoration:none; }
+@media (max-width:900px){
+  .v51-row, .v51-col{ display:none; }
+  .v43-tbl{ grid-template-columns:1fr !important; }
+  .v43-tbl .hd.o{ padding-left:0; }
+  .v51-desk .wcol{ border-left:0; border-top:1px solid var(--line-2); padding:14px 10px; }
+  .v51-desk .wcol:first-child{ border-top:0; }
+}
 </style>
 </head>
 <body>
@@ -1272,17 +1322,19 @@
 <section class="s-rec">
     <div class="eyebrow rise">How we do it <b>·</b> the app</div>
     <h2 class="rise d1">A tiny recorder.<br><em>Every app, every task.</em></h2>
-    <div class="facts rise d2"><span>Windows · macOS · Linux</span><span>1-minute install</span><span>1–2% CPU</span><span>No connectors</span><span>No keystrokes</span></div>
+    <div class="gk-lbl c rise d2">[ The recorder ]</div>
+    <div class="facts v51-pills rise d2"><span>Windows · macOS · Linux</span><span>1-minute install</span><span>1–2% CPU</span><span>No connectors</span><span>No keystrokes</span></div>
     <div class="rec-wrap rise d3">
       <div class="rframe"><img src="./assets/product-recording-win.png" alt="A Windows workday being recorded by Silow"><span class="ring" aria-hidden="true"></span></div>
-      <figure class="rec-zoom"><div class="zf"><img src="./assets/recorder-tray-win.png" alt="The Silow recorder in the Windows system tray"></div><figcaption>The whole recorder.<br><b>One icon in the tray.</b></figcaption></figure>
+      <figure class="rec-zoom v51-hl"><u class="tk1"></u><u class="tk2"></u><u class="tk3"></u><u class="tk4"></u><div class="zf"><img src="./assets/recorder-tray-win.png" alt="The Silow recorder in the Windows system tray"></div><figcaption>The whole recorder.<br><b>One icon in the tray.</b></figcaption></figure>
     </div>
     <p class="m30-opt rise d3"><b>Pause is optional.</b> Your admin decides whether employees get a pause button.</p>
   </section>
 <section class="s-sec">
   <div class="eyebrow rise">Security</div>
   <h2 class="rise d1">Your data stays <em>under your control.</em></h2>
-  <div class="desk rise d2">
+  <div class="gk-lbl c rise d2">[ What happens to a screen ]</div>
+  <div class="desk v51-desk rise d2">
     <div class="desk-in">
       <div class="wcol">
         <div class="wlab"><i>1</i>Recorded</div>
@@ -1313,7 +1365,7 @@
     </div>
         </div>
       </div>
-      <div class="wcol">
+      <div class="wcol v51-hl"><u class="tk1"></u><u class="tk2"></u><u class="tk3"></u><u class="tk4"></u>
         <div class="wlab"><i>2</i>Masked<span class="m30-tag">optional</span></div>
         <div class="screen">
           <div class="win">
@@ -1381,7 +1433,8 @@
 <section class="v31 v47-dep">
   <div class="eyebrow rise">Deployment</div>
   <h2 class="rise d1">Our servers <em>or yours.</em></h2>
-  <div class="v47-grid rise d2"><div class="hd pre" style="grid-column:1;grid-row:1"></div><div class="hd wk" style="grid-column:2;grid-row:1">Record</div><div class="hd wk" style="grid-column:3;grid-row:1">Store</div><div class="hd wk" style="grid-column:4;grid-row:1">Mask</div><div class="hd wk" style="grid-column:5;grid-row:1">Analyze</div><div class="hd wk" style="grid-column:6;grid-row:1">Report</div><div class="gl" style="grid-column:2;grid-row:1 / 4"></div><div class="gl" style="grid-column:3;grid-row:1 / 4"></div><div class="gl" style="grid-column:4;grid-row:1 / 4"></div><div class="gl" style="grid-column:5;grid-row:1 / 4"></div><div class="gl" style="grid-column:6;grid-row:1 / 4"></div><div class="lb" style="grid-column:1;grid-row:2"><b>Hosted</b></div><div class="b fl" style="grid-column:2;grid-row:2" data-s="Record">Your computers</div><div class="b fl" style="grid-column:3 / 6;grid-row:2" data-s="Store · Mask · Analyze">OVHcloud US</div><div class="b fl" style="grid-column:6;grid-row:2" data-s="Report">Silow web app</div><div class="lb y" style="grid-column:1;grid-row:3"><b>On-prem</b><em>Suggested</em></div><div class="b fl" style="grid-column:2;grid-row:3" data-s="Record">Your computers</div><div class="b fl" style="grid-column:3;grid-row:3" data-s="Store">Your servers</div><div class="b fl" style="grid-column:4;grid-row:3" data-s="Mask"><span>Your GPUs/cloud<i>Optional</i></span></div><div class="b fl" style="grid-column:5;grid-row:3" data-s="Analyze">Your GPUs/cloud</div><div class="b fl" style="grid-column:6;grid-row:3" data-s="Report">Web app in your network</div></div>
+  <div class="gk-lbl rise d2">[ Two ways to run it ]</div>
+  <div class="v47-grid rise d2"><div class="v51-row v51-hl" style="grid-column:1 / -1;grid-row:3"><u class="tk1"></u><u class="tk2"></u><u class="tk3"></u><u class="tk4"></u></div><div class="hd pre" style="grid-column:1;grid-row:1"></div><div class="hd wk" style="grid-column:2;grid-row:1">Record</div><div class="hd wk" style="grid-column:3;grid-row:1">Store</div><div class="hd wk" style="grid-column:4;grid-row:1">Mask</div><div class="hd wk" style="grid-column:5;grid-row:1">Analyze</div><div class="hd wk" style="grid-column:6;grid-row:1">Report</div><div class="gl" style="grid-column:2;grid-row:1 / 4"></div><div class="gl" style="grid-column:3;grid-row:1 / 4"></div><div class="gl" style="grid-column:4;grid-row:1 / 4"></div><div class="gl" style="grid-column:5;grid-row:1 / 4"></div><div class="gl" style="grid-column:6;grid-row:1 / 4"></div><div class="lb" style="grid-column:1;grid-row:2"><b>Hosted</b></div><div class="b fl" style="grid-column:2;grid-row:2" data-s="Record">Your computers</div><div class="b fl" style="grid-column:3 / 6;grid-row:2" data-s="Store · Mask · Analyze">OVHcloud US</div><div class="b fl" style="grid-column:6;grid-row:2" data-s="Report">Silow web app</div><div class="lb y" style="grid-column:1;grid-row:3"><b>On-prem</b><em>Suggested</em></div><div class="b fl" style="grid-column:2;grid-row:3" data-s="Record">Your computers</div><div class="b fl" style="grid-column:3;grid-row:3" data-s="Store">Your servers</div><div class="b fl" style="grid-column:4;grid-row:3" data-s="Mask"><span>Your GPUs/cloud<i>Optional</i></span></div><div class="b fl" style="grid-column:5;grid-row:3" data-s="Analyze">Your GPUs/cloud</div><div class="b fl" style="grid-column:6;grid-row:3" data-s="Report">Web app in your network</div></div>
   <p class="v31-foot rise d3">Same steps and same reports. <b>You choose where they run.</b></p>
 </section>
 <section class="s-hipaa">
@@ -1391,7 +1444,7 @@
         <h2 class="rise d1">HIPAA compliance?<br><em>Solved.</em></h2>
         <p class="body rise d2">Silow maps workflows involving medical records. It runs <b>entirely on the customer’s servers</b>, supporting the customer’s HIPAA compliance requirements.</p>
       </div>
-      <div class="hipaa-right rise d3">
+      <div class="hipaa-right v51-hl v51-card rise d3"><u class="tk1"></u><u class="tk2"></u><u class="tk3"></u><u class="tk4"></u>
         <div class="stat-num">100<small>%</small></div>
         <div class="hipaa-label">On-premises.</div>
         <div class="hipaa-provider">With the customer’s chosen model provider.</div>
@@ -1403,7 +1456,7 @@
   <div class="eyebrow rise">Deployment <b>·</b> on your servers</div>
   <h2 class="rise d1">We provide everything. <em>You run it.</em></h2>
   <div class="v43-tbl rise d2">
-    <div class="hd o">Silow provides</div><div class="hd y">Your team</div>
+    <div class="v51-col v51-hl" style="grid-column:2;grid-row:1 / 7"><u class="tk1"></u><u class="tk2"></u><u class="tk3"></u><u class="tk4"></u></div><div class="hd o">[ Silow provides ]</div><div class="hd y">[ Your team ]</div>
     <div class="c o"><b>Infrastructure requirements</b><span>Compute, GPU and storage sizing for the agreed pilot scope</span></div><div class="c y">Provisions the application host, GPU inference node and storage</div><div class="c o"><b>Server package</b><span>Container images (Docker Compose), offline install with configuration guide</span></div><div class="c y">Deploys it in your environment, configures DNS, TLS and network access</div><div class="c o"><b>Recorder agent</b><span>Silent installers for Windows, macOS and Linux</span></div><div class="c y">Distributes it to endpoints via your MDM (Intune, SCCM, Jamf)</div><div class="c o"><b>Versioned updates</b><span>Offline upgrade bundles, in-place, config and data preserved</span></div><div class="c y">Applies them through your change management process</div><div class="c o"><b>Built-in observability and engineering support</b><span>Health endpoints, pipeline status monitoring, escalation to Silow engineering</span></div><div class="c y">Connects it to your monitoring, escalates incidents</div>
   </div>
 </section>
@@ -1411,7 +1464,8 @@
   <div class="eyebrow rise">How we start</div>
   <h2 class="rise d1">First month free. <em>Results after week 1.</em></h2>
   <p class="v31-sub rise d1"><b>A pilot for 20–50 people,</b> from one team or several.</p>
-  <div class="v43-grid v44-grid rise d2"><div class="hd pre" style="grid-column:1;grid-row:1">Before week 1</div><div class="hd wk" style="grid-column:2;grid-row:1">Week 1</div><div class="hd wk" style="grid-column:3;grid-row:1">Week 2</div><div class="hd wk" style="grid-column:4;grid-row:1">Week 3</div><div class="hd wk" style="grid-column:5;grid-row:1">Week 4</div><div class="hd post" style="grid-column:6;grid-row:1">After week 4</div><div class="gl" style="grid-column:2;grid-row:1 / 7"></div><div class="gl" style="grid-column:3;grid-row:1 / 7"></div><div class="gl" style="grid-column:4;grid-row:1 / 7"></div><div class="gl" style="grid-column:5;grid-row:1 / 7"></div><div class="gl" style="grid-column:6;grid-row:1 / 7"></div><div class="b setup" style="grid-column:1;grid-row:2"><b>Setup</b></div><div class="b onb" style="grid-column:1;grid-row:3"><b>Onboarding</b></div><div class="b rec" style="grid-column:2 / 6;grid-row:4">Recording runs in the background</div><div class="b out" style="grid-column:3 / 6;grid-row:5">Reports &amp; weekly calls</div><div class="db" style="grid-column:6;grid-row:6"><b>Debrief</b></div></div>
+  <div class="gk-lbl rise d2">[ The first month ]</div>
+  <div class="v43-grid v44-grid rise d2"><div class="hd pre" style="grid-column:1;grid-row:1">Before week 1</div><div class="hd wk" style="grid-column:2;grid-row:1">Week 1</div><div class="hd wk" style="grid-column:3;grid-row:1">Week 2</div><div class="hd wk" style="grid-column:4;grid-row:1">Week 3</div><div class="hd wk" style="grid-column:5;grid-row:1">Week 4</div><div class="hd post" style="grid-column:6;grid-row:1">After week 4</div><div class="gl" style="grid-column:2;grid-row:1 / 7"></div><div class="gl" style="grid-column:3;grid-row:1 / 7"></div><div class="gl" style="grid-column:4;grid-row:1 / 7"></div><div class="gl" style="grid-column:5;grid-row:1 / 7"></div><div class="gl" style="grid-column:6;grid-row:1 / 7"></div><div class="b setup" style="grid-column:1;grid-row:2"><b>Setup</b></div><div class="b onb" style="grid-column:1;grid-row:3"><b>Onboarding</b></div><div class="b rec" style="grid-column:2 / 6;grid-row:4">Recording runs in the background</div><div class="b out" style="grid-column:3 / 6;grid-row:5">Reports &amp; weekly calls</div><div class="db v51-hl" style="grid-column:6;grid-row:6"><u class="tk1"></u><u class="tk2"></u><u class="tk3"></u><u class="tk4"></u><b>Debrief</b></div></div>
 </section>
 <section class="v31 v31-m v50">
   <div class="lvl"><span class="on"><i>1</i>Setup &amp; onboarding</span><span class=""><i>2</i>Four weeks</span><span class=""><i>3</i>Debrief</span></div>
@@ -1468,7 +1522,7 @@
 <section class="s-close v31-qa">
   <h2 class="rise">Any questions?</h2>
   <p class="lede rise d1">Next, we’ll send you the detailed technical documentation.</p>
-  <div class="site rise d2">silow.ai</div>
+  <a class="v51-pill rise d2" href="https://silow.ai" target="_blank" rel="noopener">silow.ai ↗</a>
 </section>
 </main>
 <script>
