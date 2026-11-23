@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Silow — for insurance operations</title><!-- rev:ins-v45 -->
+<title>Silow — for insurance operations</title><!-- rev:ins-v46 -->
 <style>
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
@@ -718,6 +718,21 @@
 .v37-grid .lb.y .v45-opt{ color:var(--accent); }
 @media (max-width:900px){ .v37-grid .c.o::before{ content:"Option 1"; } .v37-grid .c.y::before{ content:"Option 2"; } }
 @media (min-width:901px){ .v41-four{ grid-template-columns:repeat(5,1fr); gap:30px; width:min(1300px,92vw); } }
+
+/* v46: slide 05 rules + labels */
+@media (min-width:901px){
+  .v37-grid{ position:relative; row-gap:14px; }
+  .v37-grid > .st, .v37-grid > .ar{ margin-bottom:10px; }
+  .v37-grid > .lb:first-child{ display:block; }
+  .v37-grid .v46-hr{ grid-row:1; grid-column:1 / -1; align-self:end; border-bottom:1.5px solid var(--line-2); margin-bottom:-2px; pointer-events:none; }
+  .v37-grid .v46-vr{ grid-row:1 / 4; grid-column:1; justify-self:end; width:0; margin-right:22px; border-right:1.5px solid var(--line-2); pointer-events:none; }
+}
+.v46-hr, .v46-vr{ display:none; }
+@media (min-width:901px){ .v46-hr, .v46-vr{ display:block; } }
+.v37-grid .lb .v46-name{ font-family:"Suisse Intl",sans-serif; font-size:clamp(20px,1.6vw,26px); font-weight:500; letter-spacing:-.02em; text-transform:none; color:var(--ink); }
+.v37-grid .lb.y .v46-name{ color:var(--accent); }
+.v37-grid .lb{ gap:6px; }
+@media (min-width:901px){ .v37-grid > .lb{ grid-column:1; } }
 </style>
 </head>
 <body>
@@ -1314,7 +1329,7 @@
 <section class="v31 v37-pipe">
   <div class="eyebrow rise">Deployment</div>
   <h2 class="rise d1">Our servers <em>or yours.</em></h2>
-  <div class="v37-grid rise d2"><div class="lb" style="grid-row:1"></div><div class="st" style="grid-row:1;grid-column:2 / 3">Record</div><div class="ar" style="grid-row:1;grid-column:3">→</div><div class="st" style="grid-row:1;grid-column:4 / 5">Store</div><div class="ar" style="grid-row:1;grid-column:5">→</div><div class="st" style="grid-row:1;grid-column:6 / 7">Mask</div><div class="ar" style="grid-row:1;grid-column:7">→</div><div class="st" style="grid-row:1;grid-column:8 / 9">Analyze</div><div class="ar" style="grid-row:1;grid-column:9">→</div><div class="st" style="grid-row:1;grid-column:10 / 11">Report</div><div class="lb o" style="grid-row:2"><span class="v45-opt">Option 1</span>Hosted</div><div class="lb y" style="grid-row:3"><span class="v45-opt">Option 2</span>On-prem<em>Suggested</em></div><div class="c both" style="grid-row:2 / 4;grid-column:2 / 3">Your computers</div><div class="c o" style="grid-row:2;grid-column:4 / 9">OVHcloud US</div><div class="c o" style="grid-row:2;grid-column:10 / 11">Silow web app</div><div class="c y" style="grid-row:3;grid-column:4 / 5">Your servers</div><div class="c y v44-optc" style="grid-row:3;grid-column:6 / 7">Your GPUs/cloud<em class="v43-opt">Optional</em></div><div class="c y" style="grid-row:3;grid-column:8 / 9">Your GPUs/cloud</div><div class="c y" style="grid-row:3;grid-column:10 / 11">Web app in your network</div></div>
+  <div class="v37-grid rise d2"><div class="v46-hr"></div><div class="v46-vr"></div><div class="lb" style="grid-row:1"></div><div class="st" style="grid-row:1;grid-column:2 / 3">Record</div><div class="ar" style="grid-row:1;grid-column:3">→</div><div class="st" style="grid-row:1;grid-column:4 / 5">Store</div><div class="ar" style="grid-row:1;grid-column:5">→</div><div class="st" style="grid-row:1;grid-column:6 / 7">Mask</div><div class="ar" style="grid-row:1;grid-column:7">→</div><div class="st" style="grid-row:1;grid-column:8 / 9">Analyze</div><div class="ar" style="grid-row:1;grid-column:9">→</div><div class="st" style="grid-row:1;grid-column:10 / 11">Report</div><div class="lb o" style="grid-row:2"><span class="v46-name">Hosted</span>Option 1</div><div class="lb y" style="grid-row:3"><span class="v46-name">On-prem</span>Option 2<em>Suggested</em></div><div class="c o" style="grid-row:2;grid-column:2 / 3">Your computers</div><div class="c y" style="grid-row:3;grid-column:2 / 3">Your computers</div><div class="c o" style="grid-row:2;grid-column:4 / 9">OVHcloud US</div><div class="c o" style="grid-row:2;grid-column:10 / 11">Silow web app</div><div class="c y" style="grid-row:3;grid-column:4 / 5">Your servers</div><div class="c y v44-optc" style="grid-row:3;grid-column:6 / 7">Your GPUs/cloud<em class="v43-opt">Optional</em></div><div class="c y" style="grid-row:3;grid-column:8 / 9">Your GPUs/cloud</div><div class="c y" style="grid-row:3;grid-column:10 / 11">Web app in your network</div></div>
   <p class="v31-foot rise d3">Same steps and same reports. <b>You choose where they run.</b></p>
 </section>
 <section class="v31 v43-who">
