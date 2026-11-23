@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Silow — for insurance operations</title><!-- rev:ins-v47 -->
+<title>Silow — for insurance operations</title><!-- rev:ins-v48 -->
 <style>
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
   @font-face { font-family:"Suisse Intl"; src:url("./fonts/SuisseIntl-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
@@ -755,6 +755,9 @@
   .v47-grid .b{ min-height:0; flex-direction:column; align-items:flex-start; gap:4px; }
   .v47-grid .b::before{ content:attr(data-s); font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; font-weight:400; opacity:.7; }
 }
+
+/* v48: live demo frames */
+.v48-live{ display:block; }
 </style>
 </head>
 <body>
@@ -1391,22 +1394,22 @@
 <section class="s-depth s-prod v31-demo">
   <h2>Home: <em>the answer first.</em></h2>
   <p class="line">See what needs your attention, or ask Silow anything about the data in plain English.</p>
-  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Home + Ask Silow</div><div class="m30-ph-r">#home · #ask</div><ul><li>What changed this week and what needs attention</li><li>Where to go next: processes, teams, people</li><li>A question in plain English, answered from the data</li></ul></div></div>
+  <div class="appframe v48-live"><iframe title="Silow · home" loading="lazy" data-src="app3/index.html?embed=1#home"></iframe></div>
 </section>
 <section class="s-depth s-prod v31-demo">
   <h2>Processes: <em>how it works now and what can improve.</em></h2>
   <p class="line">Each step timed, the fastest way to do it, how people differ, and the step worth automating. Export it as documentation, or add it to the automation plan right away.</p>
-  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Process & automation</div><div class="m30-ph-r">#plan · #process/… · #case/…?step=…</div><ul><li>Every step with its time and the people who run it</li><li>Fastest path and exceptions inside a step</li><li>The step to automate, with a brief to build from</li><li>Export the process or one step as documentation</li></ul></div></div>
+  <div class="appframe v48-live"><iframe title="Silow · process" loading="lazy" data-src="app3/index.html?embed=1#case/n1"></iframe></div>
 </section>
 <section class="s-depth s-prod v31-demo">
   <h2>Team: <em>the main work streams and where the week goes.</em></h2>
   <p class="line">Recommendations first, then the processes the team owns and how each person compares.</p>
-  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Team report</div><div class="m30-ph-r">#team/…</div><ul><li>Recommendations for the team first</li><li>Time by work stream and by process</li><li>Each person against the team median, step by step</li></ul></div></div>
+  <div class="appframe v48-live"><iframe title="Silow · team report" loading="lazy" data-src="app3/index.html?embed=1#team/intake"></iframe></div>
 </section>
 <section class="s-depth s-prod v31-demo">
   <h2>Person: <em>one employee’s week.</em></h2>
   <p class="line">What they worked on, time per step against the team, and what would help them.</p>
-  <div class="appframe m30-ph"><div class="m30-ph-in"><div class="m30-ph-k">Demo · Personal report</div><div class="m30-ph-r">#people → #person/…</div><ul><li>What they worked on, day by day</li><li>Tasks completed and time per step against the team</li><li>Recommendations for this person</li></ul></div></div>
+  <div class="appframe v48-live"><iframe title="Silow · personal report" loading="lazy" data-src="app3/index.html?embed=1#person/carmen"></iframe></div>
 </section>
 <section class="s-close v31-qa">
   <h2 class="rise">Any questions?</h2>
